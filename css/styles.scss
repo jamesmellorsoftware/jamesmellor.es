@@ -1,0 +1,128 @@
+@import "colours";
+
+// ===== DOCUMENT PROPERTIES ===== //
+body {
+    background-color: $primary-1;
+    color: $primary-5; 
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+// ===== MAIN CONTAINER ===== //
+main {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh min-content repeat(4, 100vh);
+}
+
+// ===== NAVBAR ===== //
+.navbar {
+
+    width: 100%;
+    z-index: 1000;
+
+    &-selector {
+
+        background-color: $primary-3;
+        border-top: 4px solid $primary-4;
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: 100;
+        height: 1.8rem;
+        justify-content: space-around;
+        letter-spacing: 0.3px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+
+        &-item {
+            cursor: pointer;
+        }
+    }
+
+}
+
+// ===== LANDING PAGE ===== //
+.landing {
+
+    min-height: 100%;
+    min-width: 100%;
+
+    &-container {
+        display: inline-block;
+        min-height: 100%;
+        min-width: 100%;
+
+        &-video {
+            background-size: cover;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+    
+        &-overlay {
+            background-color: rgba(0,0,0, 0.6);
+            display: grid;
+            grid-template-columns: 20vw 1fr 20vw;
+            grid-template-rows: 20vh 1fr 20vh;
+            left: 0;
+            margin: 0;
+            min-height: 100%;
+            min-width: 100%;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            z-index: 999;
+
+            &-terminal {
+
+                background-color: rgba(0,0,0,0.9);
+                border: 1px solid rgb(255, 255, 255);
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+
+                &-topbar {
+
+                    background-color: rgb(255, 255, 255);
+                    color: #000;
+                    cursor: default;
+                    display: flex;
+                    font-size: 1.5rem;
+                    height: 1.8rem;
+                    justify-content: space-between;
+                    letter-spacing: 2px;
+                    width: 100%;
+
+                    &-controls {
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $primary-1;
+                            color: $primary-5;
+                        }
+                    }
+
+                }
+
+                &-text {
+                    font-family: 'Courier New', Courier, monospace;
+                }
+            }
+
+        }
+
+    }
+    
+}
+
+// ===== ABOUT ===== //
