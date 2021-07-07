@@ -6,6 +6,8 @@
         <div class="landing-container-overlay">
             <?php require_once("terminal.php"); ?>
             <?php require_once("about.php"); ?>
+            <?php require_once("contact.php"); ?>
+            <?php require_once("portfolio.php"); ?>
         </div>
     </div>
 </main>

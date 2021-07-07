@@ -45,6 +45,25 @@
                 <li>HTML 5/5</li>
                 <li>CSS 4/5</li>
                 <li>SCSS / Sass 5/5</li>
+                <li>GIT 2/5</li>
+                <li>UI Design 2/5</li>
+            </ul>
+
+            Technologies I've touched in the past:
+            <ul>
+                <li>MATLAB</li>
+                <li>C++</li>
+                <li>ZX Spectrum BASIC</li>
+                <li>Microsoft Visual BASIC</li>
+            </ul>
+
+            Technologies I'm interested in learning in the future:
+            <ul>
+                <li>Python</li>
+                <li>C</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
             </ul>
         </p>
     </p>

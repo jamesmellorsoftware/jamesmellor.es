@@ -64,6 +64,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid black;
   color: black;
+  display: none;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2 / 5;
@@ -73,6 +74,23 @@ body {
 }
 
 .terminal-about-text {
+  font-family: 'Lato', sans-serif;
+}
+
+.terminal-contact {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  color: black;
+  display: none;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+}
+
+.terminal-contact-text {
   font-family: 'Lato', sans-serif;
 }
 
@@ -90,6 +108,22 @@ body {
 
 .terminal-home-text {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-portfolio {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  color: black;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+}
+
+.terminal-portfolio-text {
+  font-family: 'Lato', sans-serif;
 }
 
 .terminal-topbar {
