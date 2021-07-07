@@ -4,9 +4,9 @@
             user@user: ~
         </span>
         <span>
-            <span class="terminal-topbar-controls terminal-topbar-home-controls">&minus;</span>
-            <span class="terminal-topbar-controls terminal-topbar-home-controls">&square;</span>
-            <span class="terminal-topbar-controls terminal-topbar-home-controls">&times;</span>
+            <span class="terminal-topbar-controls terminal-topbar-home-controls minimise">&minus;</span>
+            <span class="terminal-topbar-controls terminal-topbar-home-controls maximise">&square;</span>
+            <span class="terminal-topbar-controls terminal-topbar-home-controls close">&times;</span>
         </span>
     </div>
     <p class="terminal-text terminal-home-text">
