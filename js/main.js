@@ -4,6 +4,11 @@ $(document).ready(function(){
     var home      = $(".terminal-home");
     var portfolio = $(".terminal-portfolio");
 
+    var minimise_bar = $(".minimise_bar");
+    var landing_container_overlay = $(".landing-container-overlay");
+
+    var minimised = false;
+
     // Set original grid properties in an array
     // grid-column, grid-row
     const gridproperties_about     = [about.css("grid-column"), about.css("grid-row")];
@@ -20,13 +25,32 @@ $(document).ready(function(){
 
     $(".maximise").on("click", function(){
         let button_clicked = $(this);
-        button_clicked.css("display", "none");
-        button_clicked.siblings(".restore").css("display", "inline");
-
         let parent_section = button_clicked.closest(".terminal");
-        
-        parent_section.closest(".terminal").css("grid-column", "1 / -1");
-        parent_section.closest(".terminal").css("grid-row", "1 / -1");
+
+        if (minimised) {
+            button_clicked.siblings(".minimise").css("display", "inline");
+            parent_section.css("grid-column", gridproperties_portfolio[0]);
+            parent_section.css("grid-row", gridproperties_portfolio[1]);
+            landing_container_overlay.append(parent_section);
+            parent_section.find(".terminal-content").css("display", "none");
+            parent_section.css("height", "100%");
+            minimised = false;
+        } else {
+            button_clicked.css("display", "none");
+            button_clicked.siblings(".restore").css("display", "inline");
+            parent_section.css("grid-column", "1 / -1");
+            parent_section.css("grid-row", "1 / -1");
+        }
+    });
+
+    $(".minimise").on("click", function(){
+        let button_clicked = $(this);
+        button_clicked.css("display", "none");
+        let parent_section = button_clicked.closest(".terminal");
+        parent_section.find(".terminal-content").css("display", "none");
+        parent_section.css("height", "1.8rem");
+        minimise_bar.append(parent_section);
+        minimised = true;
     });
 
     $(".restore").on("click", function(){

@@ -4,15 +4,15 @@
             jamesmellor.es/contact
         </span>
         <span>
-            <span class="terminal-topbar-controls terminal-topbar-contact-controls">&minus;</span>
-            <span class="terminal-topbar-controls terminal-topbar-contact-controls">&square;</span>
+            <span class="terminal-topbar-controls terminal-topbar-contact-controls minimise">&minus;</span>
+            <span class="terminal-topbar-controls terminal-topbar-contact-controls maximise">&square;</span>
             <span class="terminal-topbar-controls terminal-topbar-contact-controls restore">R</span>
-            <span class="terminal-topbar-controls terminal-topbar-contact-controls">&times;</span>
+            <span class="terminal-topbar-controls terminal-topbar-contact-controls close">&times;</span>
         </span>
     </div>
 
-    <p class="terminal-text terminal-contact-text">
+    <div class="terminal-content terminal-contact-content">
         <h1>Contact me</h1>
         Email - LinkedIn
-    </p>
+    </div>
 </section>

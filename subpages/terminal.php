@@ -10,7 +10,7 @@
             <span class="terminal-topbar-controls terminal-topbar-home-controls close">&times;</span>
         </span>
     </div>
-    <p class="terminal-text terminal-home-text">
+    <div class="terminal-content terminal-home-content">
         <pre>
 // ===========================================//
 // ===========================================//
@@ -24,8 +24,8 @@
 // ===========================================//
 
         </pre>
-    </p>
-    <p class="terminal-text terminal-home-text">
-        user@User: ~ James Mellor, Software Developer
-    </p>
+        <p class="terminal-text terminal-home-text">
+            user@User: ~ James Mellor, Software Developer
+        </p>
+    </div>
 </section>

@@ -4,14 +4,14 @@
             jamesmellor.es/about
         </span>
         <span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls">&minus;</span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls">&square;</span>
+            <span class="terminal-topbar-controls terminal-topbar-about-controls minimise">&minus;</span>
+            <span class="terminal-topbar-controls terminal-topbar-about-controls maximise">&square;</span>
             <span class="terminal-topbar-controls terminal-topbar-about-controls restore">R</span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls">&times;</span>
+            <span class="terminal-topbar-controls terminal-topbar-about-controls close">&times;</span>
         </span>
     </div>
 
-    <p class="terminal-text terminal-about-text">
+    <div class="terminal-content terminal-about-content">
         <h1>About me</h1>
         <p>
             From a very young age, I have always been interested in computers.
@@ -67,5 +67,5 @@
                 <li>MongoDB</li>
             </ul>
         </p>
-    </p>
+    </div>
 </section>

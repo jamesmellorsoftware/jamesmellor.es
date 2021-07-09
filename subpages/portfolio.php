@@ -4,15 +4,14 @@
             jamesmellor.es/portfolio
         </span>
         <span>
-            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls">&minus;</span>
+            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls minimise">&minus;</span>
             <span class="terminal-topbar-controls terminal-topbar-portfolio-controls maximise">&square;</span>
             <span class="terminal-topbar-controls terminal-topbar-portfolio-controls restore">R</span>
             <span class="terminal-topbar-controls terminal-topbar-portfolio-controls close">&times;</span>
         </span>
     </div>
 
-    <p class="terminal-text terminal-portfolio-text">
+    <div class="terminal-content terminal-portfolio-content">
         <h1>Portfolio</h1>
-        
-    </p>
+    </div>
 </section>

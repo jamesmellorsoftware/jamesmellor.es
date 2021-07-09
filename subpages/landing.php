@@ -5,11 +5,12 @@
         </video>
         <div class="landing-container-overlay">
             <?php
-                require_once("icons.php");
+                require_once("nav.php");
                 require_once("terminal.php");
                 require_once("about.php");
                 require_once("contact.php");
                 require_once("portfolio.php");
+                require_once("minimise_bar.php")
             ?>
         </div>
     </div>
