@@ -3,11 +3,11 @@ body {
   color: #6FFFE9;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  height: 100vh;
   margin: 0;
-  min-height: 100vh;
-  min-width: 100vw;
   overflow-x: hidden;
   padding: 0;
+  width: 100vw;
 }
 
 .landing {
@@ -26,13 +26,13 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  min-width: 100%;
   min-height: 100%;
+  min-width: 100%;
   z-index: -1;
 }
 
 .landing-container-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10vw 10vw 1fr 10vw 10vw;
@@ -41,8 +41,8 @@ body {
       grid-template-rows: 10vh 10vh 1fr 10vh 10vh;
   left: 0;
   margin: 0;
-  min-height: 100%;
-  min-width: 100%;
+  height: 100%;
+  width: 100%;
   padding: 0;
   position: absolute;
   top: 0;
@@ -50,10 +50,13 @@ body {
 }
 
 .navbar {
-  background-color: green;
+  -ms-flex-line-pack: center;
+      align-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -67,6 +70,13 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 50px;
+}
+
+.navbar-icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 .restore {
@@ -175,8 +185,10 @@ body {
   color: #6FFFE9;
 }
 
-.terminal-text {
+.terminal-content {
   font-family: 'Courier New', Courier, monospace;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .minimise_bar {
