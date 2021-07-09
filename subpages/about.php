@@ -6,6 +6,7 @@
         <span>
             <span class="terminal-topbar-controls terminal-topbar-about-controls">&minus;</span>
             <span class="terminal-topbar-controls terminal-topbar-about-controls">&square;</span>
+            <span class="terminal-topbar-controls terminal-topbar-about-controls restore">R</span>
             <span class="terminal-topbar-controls terminal-topbar-about-controls">&times;</span>
         </span>
     </div>

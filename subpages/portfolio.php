@@ -5,8 +5,9 @@
         </span>
         <span>
             <span class="terminal-topbar-controls terminal-topbar-portfolio-controls">&minus;</span>
-            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls">&square;</span>
-            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls">&times;</span>
+            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls maximise">&square;</span>
+            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls restore">R</span>
+            <span class="terminal-topbar-controls terminal-topbar-portfolio-controls close">&times;</span>
         </span>
     </div>
 
