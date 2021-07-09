@@ -53,14 +53,30 @@ body {
 
 .navbar {
     // background-color: green;
-    align-content: center;
-    display: flex;
+    
     filter: invert(100%);
-    flex-direction: column;
-    grid-column: 1 / 2;
-    grid-row: 2 / 5;
-    justify-content: space-between;
-    width: 50px;
+    
+    width: 100%;
+
+    &-left {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+    }
+
+    &-right {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 5 / 6;
+        grid-row: 2 / 5;
+    }
 
     &-icon {
         cursor: pointer;
