@@ -8,37 +8,30 @@ $(document).ready(function(){
     var landing_container_overlay = $(".landing-container-overlay");
 
     var minimised = false;
+    
 
-    // Section properties
+    // Section classes
     const section_about = {
         grid_column: about.css("grid-column"),
-        grid_row: about.css("grid-row"),
-        minimised: false,
-        open: false
+        grid_row: about.css("grid-row")
     }
 
     const section_contact = {
         grid_column: contact.css("grid-column"),
-        grid_row: contact.css("grid-row"),
-        minimised: false,
-        open: false
+        grid_row: contact.css("grid-row")
     }
 
     const section_home = {
         grid_column: home.css("grid-column"),
-        grid_row: home.css("grid-row"),
-        minimised: false,
-        open: false
+        grid_row: home.css("grid-row")
     }
 
     const section_portfolio = {
         grid_column: portfolio.css("grid-column"),
-        grid_row: portfolio.css("grid-row"),
-        minimised: false,
-        open: false
+        grid_row: portfolio.css("grid-row")
     }
 
-    $(".navbar-icon").on("click", function(){
+    $(".navbar-icons-icon").on("click", function(){
         openWindow($(this));
         
     });
@@ -60,15 +53,7 @@ $(document).ready(function(){
     });
 
 
-
-    function highlightIcon() {
-        // If user clicks an icon, highlight it like a Windows 95 icon
-        // If they click it again after a second or two, de-highlight it
-        // If the user double-clicks it, open the corresponding page if it's not already open (openWindow())
-    }
-    
     function openWindow(icon_clicked) {
-        // If user double-clicks
         section_to_open = "terminal-" + icon_clicked.attr("id");
         $("."+section_to_open).css("display", "grid");
         $("."+section_to_open).css("z-index", "4000");
