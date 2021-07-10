@@ -23,6 +23,6 @@
     </div>
     <div class="navbar-icons">
         <img class="navbar-icons-icon" id="help" src="img/info.png" alt="Settings" width="auto" height="60">
-        <span class="navbar-icons-label">Website Help</span>
+        <span class="navbar-icons-label">Help</span>
     </div>
 </nav>

@@ -35,8 +35,8 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10vw 10vw 1fr 10vw 10vw;
-      grid-template-columns: 10vw 10vw 1fr 10vw 10vw;
+  -ms-grid-columns: 10vw 1vw 1fr 1vw 10vw;
+      grid-template-columns: 10vw 1vw 1fr 1vw 10vw;
   -ms-grid-rows: 5vh 10vh 1fr 5vh 10vh;
       grid-template-rows: 5vh 10vh 1fr 5vh 10vh;
   left: 0;
@@ -78,9 +78,7 @@ body {
 }
 
 .navbar-right {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5 / 6;
+  grid-column: 5 / -1;
 }
 
 .navbar-icons {
@@ -153,7 +151,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid white;
   color: #6FFFE9;
-  display: block;
+  display: inline-block;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
@@ -179,7 +177,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   letter-spacing: 2px;
-  width: 100%;
 }
 
 .terminal-topbar-controls {
@@ -225,5 +222,18 @@ body {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5 / 6;
+}
+
+.intro {
+  background-color: blue;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  margin: 0;
+  opacity: 100%;
+  width: 100%;
+  z-index: 10000;
 }
 /*# sourceMappingURL=styles.css.map */
