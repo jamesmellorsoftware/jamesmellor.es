@@ -3,7 +3,7 @@
         <span class="terminal-topbar-text terminal-about-contact-text">
             jamesmellor.es/contact
         </span>
-        <?php require_once("includes/terminal_topbar.php"); ?>
+        <?php require("includes/terminal_topbar.php"); ?>
     </div>
 
     <div class="terminal-content terminal-contact-content">

@@ -3,12 +3,7 @@
         <span class="terminal-topbar-text terminal-about-topbar-text">
             jamesmellor.es/about
         </span>
-        <span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls minimise">&minus;</span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls maximise">&square;</span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls restore">R</span>
-            <span class="terminal-topbar-controls terminal-topbar-about-controls close">&times;</span>
-        </span>
+        <?php require("includes/terminal_topbar.php"); ?>
     </div>
 
     <div class="terminal-content terminal-about-content">

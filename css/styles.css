@@ -153,6 +153,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid white;
   color: #6FFFE9;
+  display: block;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
