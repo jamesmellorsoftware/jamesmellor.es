@@ -37,8 +37,8 @@ body {
   display: grid;
   -ms-grid-columns: 10vw 10vw 1fr 10vw 10vw;
       grid-template-columns: 10vw 10vw 1fr 10vw 10vw;
-  -ms-grid-rows: 10vh 10vh 1fr 10vh 10vh;
-      grid-template-rows: 10vh 10vh 1fr 10vh 10vh;
+  -ms-grid-rows: 5vh 10vh 1fr 5vh 10vh;
+      grid-template-rows: 5vh 10vh 1fr 5vh 10vh;
   left: 0;
   margin: 0;
   height: 100%;
@@ -252,10 +252,28 @@ body {
 }
 
 .terminal-topbar-controls {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.terminal-topbar-controls:hover {
+.terminal-topbar-controls-control {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.terminal-topbar-controls-control:hover {
   background-color: #0B132B;
   color: #6FFFE9;
 }
