@@ -7,8 +7,6 @@ $(document).ready(function(){
     var minimise_bar = $(".minimise_bar");
     var landing_container_overlay = $(".landing-container-overlay");
 
-    var minimised = false;
-    
 
     // Section classes
     const section_about = {
@@ -31,8 +29,8 @@ $(document).ready(function(){
         grid_row: portfolio.css("grid-row")
     }
 
-    $(".navbar-icons-icon").on("click", function(){
-        openWindow($(this));
+    $(".navbar-icons").on("click", function(){
+        openWindow($(this).children(".navbar-icons-icon"));
         
     });
 
@@ -57,6 +55,7 @@ $(document).ready(function(){
         section_to_open = "terminal-" + icon_clicked.attr("id");
         $("."+section_to_open).css("display", "grid");
         $("."+section_to_open).css("z-index", "4000");
+        restoreWindow($("."+section_to_open).find(".restore"));
     }
     
     function closeWindow(button_clicked) {
@@ -64,27 +63,17 @@ $(document).ready(function(){
     }
     
     function maximiseWindow(button_clicked) {
-        let parent_section = button_clicked.closest(".terminal");
+        button_clicked.css("display", "none");
+        button_clicked.siblings(".restore").css("display", "inline");
 
-        if (minimised) {
-            button_clicked.siblings(".minimise").css("display", "inline");
-            parent_section.css("grid-column", section_home.grid_column);
-            parent_section.css("grid-row", section_home.grid_column);
-            landing_container_overlay.append(parent_section);
-            parent_section.find(".terminal-content").css("display", "block");
-            parent_section.css("height", "100%");
-            minimised = false;
-        } else {
-            button_clicked.css("display", "none");
-            button_clicked.siblings(".restore").css("display", "inline");
-            parent_section.css("grid-column", "1 / -1");
-            parent_section.css("grid-row", "1 / -1");
-        }
+        let parent_section = button_clicked.closest(".terminal");
+        parent_section.css("grid-column", "1 / -1");
+        parent_section.css("grid-row", "1 / -1");
     }
     
     function minimiseWindow(button_clicked) {
-        button_clicked.siblings(".maximise").css("display", "inline");
-        button_clicked.siblings(".restore").css("display", "none");
+        button_clicked.siblings(".restore").css("display", "inline");
+        button_clicked.siblings(".maximise").css("display", "none");
         button_clicked.css("display", "none");
         let parent_section = button_clicked.closest(".terminal");
         parent_section.find(".terminal-content").css("display", "none");
@@ -94,6 +83,7 @@ $(document).ready(function(){
     }
 
     function restoreWindow(button_clicked) {
+        button_clicked.siblings(".minimise").css("display", "inline");
         button_clicked.css("display", "none");
         button_clicked.siblings(".maximise").css("display", "inline");
         
@@ -101,6 +91,10 @@ $(document).ready(function(){
         
         parent_section.closest(".terminal").css("grid-column", section_home.grid_column);
         parent_section.closest(".terminal").css("grid-row", section_home.grid_row);
+
+        parent_section.find(".terminal-content").css("display", "block");
+        parent_section.css("height", "100%");
+        landing_container_overlay.append(parent_section);
     }
 
 });
