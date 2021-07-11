@@ -6,6 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -184,8 +185,26 @@ body {
   visibility: visible;
 }
 
+@media screen and (max-width: 690px) {
+  .minimise {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .maximise {
+    display: none !important;
+  }
+}
+
 .restore {
   display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .restore {
+    display: none !important;
+  }
 }
 
 .no_windows {

@@ -11,6 +11,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     padding: 0;
     user-select: none;
     width: 100vw;
@@ -120,7 +121,11 @@ body {
     }
 }
 
+// ===== WINDOW TOPBAR BUTTONS ===== //
+.minimise { @media screen and (max-width: $mobile_width) { display: none !important; } }
+.maximise { @media screen and (max-width: $mobile_width) { display: none !important; } }
 .restore {
+    @media screen and (max-width: $mobile_width) { display: none !important; }
     display: none;
 }
 
