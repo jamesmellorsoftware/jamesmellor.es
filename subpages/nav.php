@@ -22,7 +22,7 @@
         <span class="navbar-icons-label">Settings</span>
     </div>
     <div class="navbar-icons">
-        <img class="navbar-icons-icon" id="help" src="img/info.png" alt="Settings" width="auto" height="60">
-        <span class="navbar-icons-label">Help</span>
+        <img class="navbar-icons-icon" id="help" src="img/en.png" alt="Language" width="auto" height="60">
+        <span class="navbar-icons-label">Language</span>
     </div>
 </nav>

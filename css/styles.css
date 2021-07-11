@@ -175,6 +175,12 @@ body {
   opacity: 100%;
 }
 
+.navbar-icons:active, .navbar-icons:focus {
+  background-color: #0B132B;
+  -webkit-transform: scale(0.9) translateY(3px);
+          transform: scale(0.9) translateY(3px);
+}
+
 .navbar-icons:hover > .navbar-icons-icon {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -349,6 +355,12 @@ body {
 .terminal-topbar-controls-control:hover {
   background-color: #0B132B;
   color: #6FFFE9;
+}
+
+.terminal-topbar-controls-control:active, .terminal-topbar-controls-control:focus {
+  background-color: #2a49a5;
+  -webkit-transform: scale(0.9) translateY(3px);
+          transform: scale(0.9) translateY(3px);
 }
 
 .terminal-topbar-text {

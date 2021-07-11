@@ -110,6 +110,12 @@ body {
             opacity: 100%;
         }
 
+        &:active,
+        &:focus {
+            background-color: $primary-1;
+            transform: scale(0.9)  translateY(3px);
+        }
+
         &:hover > &-icon {
             transform: scale(1.2);
         }
@@ -213,6 +219,12 @@ body {
                 &:hover {
                     background-color: $primary-1;
                     color: $primary-5;
+                }
+
+                &:active,
+                &:focus {
+                    background-color: lighten($primary-1, 30%);
+                    transform: scale(0.9)  translateY(3px);
                 }
 
             }
