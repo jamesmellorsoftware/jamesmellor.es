@@ -6,7 +6,7 @@
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
     <div class="terminal-content terminal-home-content">
-        <pre>
+<pre>
 // ===========================================//
 // ===========================================//
 
@@ -17,8 +17,7 @@
 
 // ===========================================//
 // ===========================================//
-
-        </pre>
+</pre>
         <p class="terminal-text terminal-home-text">
             user@User: ~ James Mellor, Software Developer
         </p>
