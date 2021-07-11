@@ -207,6 +207,14 @@ body {
   }
 }
 
+.close {
+  background-color: #dc3545;
+}
+
+.close:hover {
+  background-color: #66121a !important;
+}
+
 .no_windows {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -251,6 +259,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   display: none;
   font-family: 'Lato', sans-serif;
+  z-index: 5000;
 }
 
 @media screen and (min-width: 690px) {
@@ -283,18 +292,27 @@ body {
 }
 
 .terminal-topbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
-  color: #000;
+  color: grey;
   cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.5rem;
+  font-family: 'Courier New', 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
   height: 1.8rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   letter-spacing: 2px;
+}
+
+.terminal-topbar__dark {
+  background-color: black;
+  border: 1px solid white;
 }
 
 .terminal-topbar-controls {
@@ -322,6 +340,11 @@ body {
 .terminal-topbar-controls-control:hover {
   background-color: #0B132B;
   color: #6FFFE9;
+}
+
+.terminal-topbar-text {
+  font-size: 0.8rem;
+  padding-left: 10px;
 }
 
 .terminal-content {

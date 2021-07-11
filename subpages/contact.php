@@ -1,5 +1,5 @@
 <section class="terminal terminal-contact">
-    <div class="terminal-topbar terminal-contact-topbar">
+    <div class="terminal-topbar terminal-contact-topbar terminal-topbar__dark">
         <span class="terminal-topbar-text terminal-about-contact-text">
             jamesmellor.es/contact
         </span>

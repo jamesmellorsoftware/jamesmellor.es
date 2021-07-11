@@ -1,5 +1,5 @@
 <section class="terminal terminal-portfolio">
-    <div class="terminal-topbar terminal-contact-portfolio">
+    <div class="terminal-topbar terminal-contact-portfolio terminal-topbar__dark">
         <span class="terminal-topbar-text terminal-about-portfolio-text">
             jamesmellor.es/portfolio
         </span>
