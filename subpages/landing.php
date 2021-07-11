@@ -5,8 +5,8 @@
         </video>
         <div class="landing-container-overlay">
             <?php
-                require_once("intro.php");
                 require_once("nav.php");
+                require_once("no_windows.php");
                 require_once("home.php");
                 require_once("about.php");
                 require_once("contact.php");
