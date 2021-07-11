@@ -219,7 +219,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #6FFFE9;
+  color: #6c757d;
   cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,7 +296,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  color: grey;
+  color: #6c757d;
   cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
