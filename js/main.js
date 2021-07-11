@@ -1,33 +1,11 @@
 $(document).ready(function(){
-    var about     = $(".terminal-about");
-    var contact   = $(".terminal-contact");
-    var home      = $(".terminal-home");
-    var portfolio = $(".terminal-portfolio");
 
-    var minimise_bar = $(".minimise_bar");
-    var landing_container_overlay = $(".landing-container-overlay");
-
+    var lang_selector = 0;
+    var languages = ["en", "es"];
+    hideLanguageElements();
 
     // Section classes
-    const section_about = {
-        grid_column: about.css("grid-column"),
-        grid_row: about.css("grid-row")
-    }
-
-    const section_contact = {
-        grid_column: contact.css("grid-column"),
-        grid_row: contact.css("grid-row")
-    }
-
-    const section_home = {
-        grid_column: home.css("grid-column"),
-        grid_row: home.css("grid-row")
-    }
-
-    const section_portfolio = {
-        grid_column: portfolio.css("grid-column"),
-        grid_row: portfolio.css("grid-row")
-    }
+    const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
     $(".navbar-icons").on("click", function(){
         openWindow($(this).children(".navbar-icons-icon"));
@@ -50,6 +28,29 @@ $(document).ready(function(){
         restoreWindow($(this));
     });
 
+    $(".language").on("click", function(){
+        changeLanguage($(this).children("#language"));
+    });
+
+
+    function changeLanguage(language_button) {
+        lang_selector = lang_selector + 1;
+        if (typeof languages[lang_selector] === "undefined") lang_selector = 0;
+        let next_language = languages[lang_selector];
+        language_button.attr("src", "img/" + next_language + ".png");
+
+        hideLanguageElements();
+    }
+
+    function hideLanguageElements() {
+        $.each(languages, function(key, value) {
+            if (key != lang_selector) {
+                $("[lang='"+value+"']").hide();
+            } else {
+                $("[lang='"+value+"']").show();
+            }
+        });
+    }
 
     function openWindow(icon_clicked) {
         section_to_open = "terminal-" + icon_clicked.attr("id");
@@ -78,8 +79,7 @@ $(document).ready(function(){
         let parent_section = button_clicked.closest(".terminal");
         parent_section.find(".terminal-content").hide();
         parent_section.css("height", "1.8rem");
-        minimise_bar.append(parent_section);
-        minimised = true;
+        $(".minimise_bar").append(parent_section);
     }
 
     function restoreWindow(button_clicked) {
@@ -89,12 +89,12 @@ $(document).ready(function(){
         
         let parent_section = button_clicked.closest(".terminal");
         
-        parent_section.closest(".terminal").css("grid-column", section_home.grid_column);
-        parent_section.closest(".terminal").css("grid-row", section_home.grid_row);
+        parent_section.closest(".terminal").css("grid-column", section.grid_column);
+        parent_section.closest(".terminal").css("grid-row", section.grid_row);
 
         parent_section.find(".terminal-content").show();
         parent_section.css("height", "100%");
-        landing_container_overlay.append(parent_section);
+        $(".landing-container-overlay").append(parent_section);
     }
 
 });

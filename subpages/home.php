@@ -1,6 +1,6 @@
 <section class="terminal terminal-home">
     <div class="terminal-topbar terminal-home-topbar">
-        <span class="terminal-topbar-text terminal-home-topbar-text" lang="en">
+        <span class="terminal-topbar-text terminal-home-topbar-text">
             user@user: ~
         </span>
         <?php require("includes/terminal_topbar.php"); ?>
