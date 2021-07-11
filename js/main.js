@@ -53,13 +53,13 @@ $(document).ready(function(){
 
     function openWindow(icon_clicked) {
         section_to_open = "terminal-" + icon_clicked.attr("id");
-        $("."+section_to_open).css("display", "grid");
+        $("."+section_to_open).fadeIn(100);
         $("."+section_to_open).css("z-index", "4000");
         restoreWindow($("."+section_to_open).find(".restore"));
     }
     
     function closeWindow(button_clicked) {
-        button_clicked.closest(".terminal").css("display", "none");
+        button_clicked.closest(".terminal").fadeOut(100);
     }
     
     function maximiseWindow(button_clicked) {
@@ -76,7 +76,7 @@ $(document).ready(function(){
         button_clicked.siblings(".maximise").css("display", "none");
         button_clicked.css("display", "none");
         let parent_section = button_clicked.closest(".terminal");
-        parent_section.find(".terminal-content").css("display", "none");
+        parent_section.find(".terminal-content").hide();
         parent_section.css("height", "1.8rem");
         minimise_bar.append(parent_section);
         minimised = true;
@@ -92,7 +92,7 @@ $(document).ready(function(){
         parent_section.closest(".terminal").css("grid-column", section_home.grid_column);
         parent_section.closest(".terminal").css("grid-row", section_home.grid_row);
 
-        parent_section.find(".terminal-content").css("display", "block");
+        parent_section.find(".terminal-content").show();
         parent_section.css("height", "100%");
         landing_container_overlay.append(parent_section);
     }
