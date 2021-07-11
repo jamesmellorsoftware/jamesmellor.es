@@ -215,6 +215,7 @@ body {
 
                 padding-left: 5px;
                 padding-right: 5px;
+                transition: transform 0.1s;
 
                 &:hover {
                     background-color: $primary-1;
@@ -224,7 +225,7 @@ body {
                 &:active,
                 &:focus {
                     background-color: lighten($primary-1, 30%);
-                    transform: scale(0.9)  translateY(3px);
+                    transform: scale(0.9) translateY(3px);
                 }
 
             }

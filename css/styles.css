@@ -350,6 +350,10 @@ body {
 .terminal-topbar-controls-control {
   padding-left: 5px;
   padding-right: 5px;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .terminal-topbar-controls-control:hover {
