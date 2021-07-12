@@ -57,7 +57,7 @@ body {
             padding: 0;
             position: absolute;
             top: 0;
-            z-index: 999;
+            z-index: 1;
         }
     }
 }
@@ -172,7 +172,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1.8rem 1fr;
     overflow-y: hidden;
-    z-index: 5000;
+    z-index: 2;
 
     &-home {
         background-color: rgba(0,0,0,0.9);

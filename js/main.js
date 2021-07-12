@@ -50,7 +50,8 @@ $(document).ready(function(){
     function openWindow(icon_clicked) {
         section_to_open = "terminal-" + icon_clicked.attr("id");
         $("."+section_to_open).fadeIn(100);
-        $("."+section_to_open).css("z-index", "4000");
+        $("."+section_to_open).css("z-index", "2");
+        $(".terminal").not("."+section_to_open).css("z-index", "1");
         restoreWindow($("."+section_to_open).find(".restore"));
     }
     
@@ -90,6 +91,9 @@ $(document).ready(function(){
         parent_section.find(".terminal-content").show();
         parent_section.css("height", "100%");
         $(".landing-container-overlay").append(parent_section);
+
+        $("."+parent_section).css("z-index", "2");
+        $(".terminal").not("."+parent_section).css("z-index", "1");
     }
 
 });
