@@ -1,4 +1,4 @@
-<section class="terminal terminal-home">
+<section href="home" class="terminal terminal-home">
     <div class="terminal-topbar terminal-home-topbar">
         <?php foreach (SECTION_TERMINAL_TITLE as $lang => $output) { ?>
             <span class="terminal-topbar-text terminal-home-topbar-text" lang="<?php echo $lang; ?>">

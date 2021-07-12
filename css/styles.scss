@@ -105,6 +105,11 @@ body {
             visibility: hidden;
         }
 
+        &-selected {
+            background-color: rgba(255,255,255,0.1);
+            opacity: 100%;
+        }
+
         &:hover {
             background-color: rgba(255,255,255,0.1);
             opacity: 100%;

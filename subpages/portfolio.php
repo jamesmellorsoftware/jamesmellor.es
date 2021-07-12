@@ -1,4 +1,4 @@
-<section class="terminal terminal-portfolio">
+<section href="portfolio" class="terminal terminal-portfolio">
     <div class="terminal-topbar terminal-portfolio-topbar terminal-topbar__dark">
         <?php foreach (SECTION_PORTFOLIO_TITLE as $lang => $output) { ?>
             <span class="terminal-topbar-text terminal-topbar-portfolio-text" lang="<?php echo $lang; ?>">

@@ -49,6 +49,7 @@ $(document).ready(function(){
     }
 
     function openWindow(icon_clicked) {
+        icon_clicked.addClass("navbar-icons-selected");
         icon_clicked = icon_clicked.children(".navbar-icons-icon");
         section_to_open = ".terminal-" + icon_clicked.attr("id");
         $(section_to_open).fadeIn(100);
@@ -58,7 +59,11 @@ $(document).ready(function(){
     }
     
     function closeWindow(button_clicked) {
-        button_clicked.closest(".terminal").fadeOut(100);
+        let parent_section = button_clicked.closest(".terminal");
+        parent_section.fadeOut(100);
+
+        let navbar_button = "#" + parent_section.attr("href");
+        $(navbar_button).parent(".navbar-icons").removeClass("navbar-icons-selected");
     }
     
     function maximiseWindow(button_clicked) {

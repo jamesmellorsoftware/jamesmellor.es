@@ -1,4 +1,4 @@
-<section class="terminal terminal-contact">
+<section href="contact" class="terminal terminal-contact">
     <div class="terminal-topbar terminal-contact-topbar terminal-topbar__dark">
         <?php foreach (SECTION_CONTACT_TITLE as $lang => $output) { ?>
             <span class="terminal-topbar-text terminal-contact-topbar-text" lang="<?php echo $lang; ?>">

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-left">
-    <div class="navbar-icons">
+    <div class="navbar-icons navbar-icons-selected">
         <img class="navbar-icons-icon" id="home" src="img/command-window.png" alt="Home">
         <?php foreach (NAVBAR_TERMINAL as $lang => $output) { ?>
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
