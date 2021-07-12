@@ -3,6 +3,11 @@
         <span class="terminal-topbar-text terminal-about-topbar-text">
             jamesmellor.es/about
         </span>
+        <?php foreach (SECTION_ABOUT_TITLE as $lang => $output) { ?>
+            <span class="terminal-topbar-text terminal-about-topbar-text" lang="<?php echo $lang; ?>">
+                <?php echo $output; ?>
+            </span>
+        <?php } ?>
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
 

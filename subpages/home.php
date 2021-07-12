@@ -1,8 +1,10 @@
 <section class="terminal terminal-home">
     <div class="terminal-topbar terminal-home-topbar">
-        <span class="terminal-topbar-text terminal-home-topbar-text">
-            user@user: ~
-        </span>
+        <?php foreach (SECTION_TERMINAL_TITLE as $lang => $output) { ?>
+            <span class="terminal-topbar-text terminal-home-topbar-text" lang="<?php echo $lang; ?>">
+                <?php echo $output; ?>
+            </span>
+        <?php } ?>
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
     <div class="terminal-content terminal-home-content">

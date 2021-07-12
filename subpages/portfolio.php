@@ -1,8 +1,10 @@
 <section class="terminal terminal-portfolio">
-    <div class="terminal-topbar terminal-contact-portfolio terminal-topbar__dark">
-        <span class="terminal-topbar-text terminal-about-portfolio-text">
-            jamesmellor.es/portfolio
-        </span>
+    <div class="terminal-topbar terminal-portfolio-topbar terminal-topbar__dark">
+        <?php foreach (SECTION_PORTFOLIO_TITLE as $lang => $output) { ?>
+            <span class="terminal-topbar-text terminal-topbar-portfolio-text" lang="<?php echo $lang; ?>">
+                <?php echo $output; ?>
+            </span>
+        <?php } ?>
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
 

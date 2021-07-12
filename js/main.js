@@ -4,7 +4,6 @@ $(document).ready(function(){
     var languages = ["en", "es"];
     hideLanguageElements();
 
-    // Section classes
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
     $(".navbar-icons").on("click", function(){
@@ -44,11 +43,7 @@ $(document).ready(function(){
 
     function hideLanguageElements() {
         $.each(languages, function(key, value) {
-            if (key != lang_selector) {
-                $("[lang='"+value+"']").hide();
-            } else {
-                $("[lang='"+value+"']").show();
-            }
+            (key != lang_selector) ? $("[lang='"+value+"']").hide() : $("[lang='"+value+"']").show();
         });
     }
 
