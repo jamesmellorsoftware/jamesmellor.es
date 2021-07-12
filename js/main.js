@@ -7,7 +7,7 @@ $(document).ready(function(){
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
     $(".navbar-icons").on("click", function(){
-        openWindow($(this).children(".navbar-icons-icon"));
+        openWindow($(this));
         
     });
 
@@ -28,11 +28,12 @@ $(document).ready(function(){
     });
 
     $(".language").on("click", function(){
-        changeLanguage($(this).children("#language"));
+        changeLanguage($(this));
     });
 
 
     function changeLanguage(language_button) {
+        language_button = language_button.children("#language");
         lang_selector = lang_selector + 1;
         if (typeof languages[lang_selector] === "undefined") lang_selector = 0;
         let next_language = languages[lang_selector];
@@ -48,11 +49,12 @@ $(document).ready(function(){
     }
 
     function openWindow(icon_clicked) {
-        section_to_open = "terminal-" + icon_clicked.attr("id");
-        $("."+section_to_open).fadeIn(100);
-        $("."+section_to_open).css("z-index", "2");
-        $(".terminal").not("."+section_to_open).css("z-index", "1");
-        restoreWindow($("."+section_to_open).find(".restore"));
+        icon_clicked = icon_clicked.children(".navbar-icons-icon");
+        section_to_open = ".terminal-" + icon_clicked.attr("id");
+        $(section_to_open).fadeIn(100);
+        $(section_to_open).css("z-index", "2");
+        $(".terminal").not(section_to_open).css("z-index", "1");
+        restoreWindow($(section_to_open).find(".restore"));
     }
     
     function closeWindow(button_clicked) {
@@ -85,15 +87,15 @@ $(document).ready(function(){
         
         let parent_section = button_clicked.closest(".terminal");
         
-        parent_section.closest(".terminal").css("grid-column", section.grid_column);
-        parent_section.closest(".terminal").css("grid-row", section.grid_row);
+        parent_section.css("grid-column", section.grid_column);
+        parent_section.css("grid-row", section.grid_row);
 
         parent_section.find(".terminal-content").show();
         parent_section.css("height", "100%");
         $(".landing-container-overlay").append(parent_section);
 
-        $("."+parent_section).css("z-index", "2");
-        $(".terminal").not("."+parent_section).css("z-index", "1");
+        $(parent_section).css("z-index", "2");
+        $(".terminal").not(parent_section).css("z-index", "1");
     }
 
 });
