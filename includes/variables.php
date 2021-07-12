@@ -23,6 +23,9 @@ defined("SECTION_CONTACT_TITLE") ? null : define("SECTION_CONTACT_TITLE", ['en' 
 // Portfolio window
 defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE", ['en' => PAGE_URL."/"."my-work", 'es' => PAGE_URL."/"."mis-proyectos"]);
 
+// Settings window
+defined("SECTION_SETTINGS_TITLE") ? null : define("SECTION_SETTINGS_TITLE", ['en' => PAGE_URL."/"."settings", 'es' => PAGE_URL."/"."configuración"]);
+
 // Terminal window
 defined("SECTION_TERMINAL_TITLE") ? null : define("SECTION_TERMINAL_TITLE", ['en' => 'user@user: ~', 'es' => 'usuario@usuario: ~']);
 ?>
