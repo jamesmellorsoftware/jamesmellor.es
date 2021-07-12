@@ -86,6 +86,8 @@ $(document).ready(function(){
     }
 
     function restoreWindow(button_clicked) {
+        if (button_clicked.css("display") == "none") return false;
+        
         button_clicked.siblings(".minimise").css("display", "inline");
         button_clicked.css("display", "none");
         button_clicked.siblings(".maximise").css("display", "inline");
