@@ -102,12 +102,16 @@ a {
 
         &-icon {
             height: 40px;
+            transition: all 0.3s;
             width: 40px;
         }
 
         &-label {
+            color: rgb(255,255,255);
             margin-top: 5px;
-            visibility: hidden;
+            opacity: 0%;
+            transform: translateY(-5px);
+            transition: all 0.3s;
         }
 
         &-selected {
@@ -132,8 +136,8 @@ a {
         }
 
         &:hover > &-label {
-            color: rgb(255,255,255);
-            visibility: visible;
+            opacity: 100%;
+            transform: translateY(5px);
         }
     }
 }

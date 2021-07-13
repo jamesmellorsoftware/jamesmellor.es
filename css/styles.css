@@ -167,12 +167,19 @@ a {
 
 .navbar-icons-icon {
   height: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   width: 40px;
 }
 
 .navbar-icons-label {
+  color: white;
   margin-top: 5px;
-  visibility: hidden;
+  opacity: 0%;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .navbar-icons-selected {
@@ -198,8 +205,9 @@ a {
 }
 
 .navbar-icons:hover > .navbar-icons-label {
-  color: white;
-  visibility: visible;
+  opacity: 100%;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 @media screen and (max-width: 690px) {
