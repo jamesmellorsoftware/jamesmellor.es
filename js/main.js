@@ -8,7 +8,6 @@ $(document).ready(function(){
 
     $(".navbar-icons").not(".language").on("click", function(){
         openWindow($(this));
-        
     });
 
     $(".close").on("click", function(){
@@ -29,6 +28,10 @@ $(document).ready(function(){
 
     $(".language").on("click", function(){
         changeLanguage($(this));
+    });
+
+    $(".terminal-contact-content-icons-icon").on("click", function(){
+        window.location = $(this).attr("href");
     });
 
 

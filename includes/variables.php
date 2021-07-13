@@ -19,6 +19,9 @@ defined("SECTION_ABOUT_TITLE") ? null : define("SECTION_ABOUT_TITLE", ['en' => P
 
 // Contact window
 defined("SECTION_CONTACT_TITLE") ? null : define("SECTION_CONTACT_TITLE", ['en' => PAGE_URL."/"."contact", 'es' => PAGE_URL."/"."contacto"]);
+defined("SECTION_CONTACT_EMAIL") ? null : define("SECTION_CONTACT_EMAIL", "mellor29j@gmail.com");
+defined("SECTION_CONTACT_LINKEDIN") ? null : define("SECTION_CONTACT_LINKEDIN", "mellor29j");
+defined("SECTION_CONTACT_LINKEDIN_URL") ? null : define("SECTION_CONTACT_LINKEDIN_URL", "https://www.linkedin.com/in/".SECTION_CONTACT_LINKEDIN);
 
 // Portfolio window
 defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE", ['en' => PAGE_URL."/"."my-work", 'es' => PAGE_URL."/"."mis-proyectos"]);
