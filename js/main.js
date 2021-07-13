@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
-    $(".navbar-icons").not(".language").on("click", function(){
+    $(".navbar-icons").not(".nowindow").on("click", function(){
         openWindow($(this));
     });
 

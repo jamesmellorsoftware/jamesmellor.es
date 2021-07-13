@@ -25,13 +25,13 @@
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
         <?php } ?>
     </div>
-    <div class="navbar-icons">
-        <img class="navbar-icons-icon" id="settings" src="img/settings.png" alt="Settings">
-        <?php foreach (NAVBAR_SETTINGS as $lang => $output) { ?>
+    <div class="navbar-icons nowindow">
+        <img class="navbar-icons-icon" id="light_dark_mode" src="img/brightness.png" alt="Light / Dark Mode">
+        <?php foreach (NAVBAR_LIGHTDARK as $lang => $output) { ?>
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
         <?php } ?>
     </div>
-    <div class="navbar-icons language">
+    <div class="navbar-icons nowindow language">
         <img class="navbar-icons-icon" id="language" src="img/en.png" alt="Language">
         <?php foreach (NAVBAR_LANGUAGE as $lang => $output) { ?>
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>

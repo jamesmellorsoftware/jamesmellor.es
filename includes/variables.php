@@ -8,7 +8,7 @@ defined("NAVBAR_ABOUT") ? null : define("NAVBAR_ABOUT", ['en' => 'About', 'es' =
 defined("NAVBAR_CONTACT") ? null : define("NAVBAR_CONTACT", ['en' => 'Contact', 'es' => 'Contacto']);
 defined("NAVBAR_LANGUAGE") ? null : define("NAVBAR_LANGUAGE", ['en' => 'Language', 'es' => 'Idioma']);
 defined("NAVBAR_MYWORK") ? null : define("NAVBAR_MYWORK", ['en' => 'My Work', 'es' => 'Proyectos']);
-defined("NAVBAR_SETTINGS") ? null : define("NAVBAR_SETTINGS", ['en' => 'Settings', 'es' => 'Configuración']);
+defined("NAVBAR_LIGHTDARK") ? null : define("NAVBAR_LIGHTDARK", ['en' => 'Lights', 'es' => 'Luz']);
 defined("NAVBAR_TERMINAL") ? null : define("NAVBAR_TERMINAL", ['en' => 'Terminal', 'es' => 'Terminal']);
 
 // No windows open section
