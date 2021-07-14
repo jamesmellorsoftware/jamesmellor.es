@@ -1,6 +1,7 @@
 @import "colours";
 
 $mobile_width: 690px;
+$small_mobile_width: 550px;
 
 // ===== DOCUMENT PROPERTIES ===== //
 body {
@@ -203,17 +204,23 @@ p {
     // ===== INDIVIDUAL WINDOWS ===== //
     &-about {
         &-content {
-            display: grid;
-            grid-template-columns: 70% 30%;
-            grid-template-rows: 1fr;
+            @media screen and (min-width: $small_mobile_width) {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                grid-template-rows: 1fr;
+            }
+            @media screen and (max-width: $small_mobile_width) { display: block; }
+            
             padding-bottom: 20px;
             padding-top: 20px;
 
             &-left {
-                grid-column: 1 / 2;
-                grid-row: 1 / -1;
-                overflow-y: scroll;
-                margin-bottom: 60px;
+                @media screen and (min-width: $small_mobile_width) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / -1;
+                    margin-bottom: 60px;
+                    overflow-y: scroll;
+                }
                 padding-left: 10px;
                 padding-right: 10px;
 
@@ -261,16 +268,26 @@ p {
             }
 
             &-right {
+                @media screen and (min-width: $small_mobile_width) {
+                    border-left: 2px solid $grey;
+                    grid-column: 2 / 3;
+                    grid-row: 1 / -1;
+                    height: 90%;
+                    justify-content: space-around;
+                }
+                @media screen and (max-width: $small_mobile_width) {
+                    justify-content: flex-start;
+                }
+                
                 align-items: center;
                 display: flex;
-                border-left: 2px solid $grey;
                 flex-direction: column;
-                grid-column: 2 / 3;
-                grid-row: 1 / -1;
-                height: 90%;
-                justify-content: space-around;
-
+                
                 &-languages {
+                    @media screen and (max-width: $small_mobile_width) {
+                        margin-bottom: 80px;
+                        margin-top: 20px;
+                    }
                     align-items: center;
                     display: flex;
                     flex-direction: column;

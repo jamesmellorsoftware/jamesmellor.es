@@ -319,25 +319,41 @@ p {
 }
 
 .terminal-about-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
+@media screen and (min-width: 550px) {
+  .terminal-about-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-about-content {
+    display: block;
+  }
+}
+
 .terminal-about-content-left {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  grid-row: 1 / -1;
-  overflow-y: scroll;
-  margin-bottom: 60px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+@media screen and (min-width: 550px) {
+  .terminal-about-content-left {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin-bottom: 60px;
+    overflow-y: scroll;
+  }
 }
 
 .terminal-about-content-left-heading {
@@ -395,18 +411,31 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-left: 2px solid #6c757d;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  grid-row: 1 / -1;
-  height: 90%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+
+@media screen and (min-width: 550px) {
+  .terminal-about-content-right {
+    border-left: 2px solid #6c757d;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    height: 90%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-about-content-right {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .terminal-about-content-right-languages {
@@ -423,6 +452,13 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-about-content-right-languages {
+    margin-bottom: 80px;
+    margin-top: 20px;
+  }
 }
 
 .terminal-about-content-right-languages-img {
