@@ -303,6 +303,7 @@ p {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
+            height: 100%;
 
             &-icons {
                 align-items: center;
@@ -430,20 +431,6 @@ p {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         overflow-y: scroll;
-
-        &-heading {
-
-            margin: 0;
-            padding: 0;
-
-            &__1 {
-                font-weight: 400;
-            }
-            &__2 {
-                font-size: 1.6rem;
-                font-weight: 400;
-            }
-        }
     }
 }
 

@@ -461,6 +461,7 @@ p {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
+  height: 100%;
 }
 
 .terminal-contact-content-icons {
@@ -643,20 +644,6 @@ p {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   overflow-y: scroll;
-}
-
-.terminal-content-heading {
-  margin: 0;
-  padding: 0;
-}
-
-.terminal-content-heading__1 {
-  font-weight: 400;
-}
-
-.terminal-content-heading__2 {
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 @media screen and (min-width: 690px) {
