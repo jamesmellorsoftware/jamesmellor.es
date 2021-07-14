@@ -11,15 +11,17 @@
     <div class="terminal-content terminal-about-content">
 
         <div class="terminal-about-content-left">
-            <h1 class="terminal-about-content-left-heading">
-                Hello.
-            </h1>
+            <?php foreach (SECTION_ABOUT_LEFT_HEADING as $lang => $output) { ?>
+                <h1 class="terminal-about-content-left-heading" lang="<?php echo $lang; ?>">
+                    <?php echo $output; ?>
+                </h1>
+            <?php } ?>
             <div class="terminal-about-content-left-paragraph">
-                <p>I'm James, and I'm a software developer.</p>
-                <p>I use programming languages and development tools to produce computer applications.</p>
-                <p>"Full-stack developer" is more accurate - I've mostly worked on systems with
-                JavaScript frontends, PHP backends, and SQL databases.</p>
-                <p>Here are some of my skills and my confidence level with them.</p>
+                <?php foreach (SECTION_ABOUT_LEFT_PARAGRAPHS_TOP as $paragraph) { ?>
+                    <?php foreach ($paragraph as $lang => $output) { ?>
+                        <p lang="<?php echo $lang; ?>"><?php echo $output; ?></p>
+                    <?php } ?>
+                <?php } ?>
             </div>
             <div class="terminal-about-content-left-presenttech">
                 <?php foreach (SECTION_ABOUT_SKILLS as $skill => $percentage) { ?>
@@ -38,27 +40,27 @@
                 <?php } ?>
             </div>
             <div class="terminal-about-content-left-paragraph">
-                <p>However, I believe labels are restricting.</p>
-                <p>While I'm best at full-stack at the moment, this may change in the future.</p>
-                <p>I'm interested in many aspects of programming, design, and development.</p>
-                <p>In the past, I've used C++, MATLAB, BASIC, and IBM RPG.<p>
-                <p>
-                    At the moment I'm interested in learning Laravel, improving my JavaScript skills,
-                    eventually building some React proejcts, and potentially learning a lower-level
-                    language such as C.
-                </p>
+                <?php foreach (SECTION_ABOUT_LEFT_PARAGRAPHS_BOTTOM as $paragraph) { ?>
+                    <?php foreach ($paragraph as $lang => $output) { ?>
+                        <p lang="<?php echo $lang; ?>"><?php echo $output; ?></p>
+                    <?php } ?>
+                <?php } ?>
             </div>
         </div>
 
         <div class="terminal-about-content-right">
             <div class="terminal-about-content-right-location">
                 <img class="terminal-about-content-right-location-img" src="img/passport.png" alt="Passport">
-                United Kingdom<br>
+                <?php foreach (SECTION_ABOUT_RIGHT_FROM as $lang => $output) { ?>
+                    <p lang="<?php echo $lang; ?>"><?php echo $output; ?></p>
+                <?php } ?>
                 <img class="terminal-about-content-right-location-img" src="img/pin.png" src="Location">
-                Barcelona, ES
+                <p>Barcelona, ES</p>
             </div>
             <div class="terminal-about-content-right-languages">
-                Languages
+                <?php foreach (SECTION_ABOUT_RIGHT_LANGUAGES as $lang => $output) { ?>
+                    <p lang="<?php echo $lang; ?>"><?php echo $output; ?></p>
+                <?php } ?>
                 <div>
                     <img class="terminal-about-content-right-languages-img" src="img/uk.png" alt="English">
                     <img class="terminal-about-content-right-languages-img" src="img/spain.png" alt="Spanish">

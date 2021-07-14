@@ -3,19 +3,112 @@ defined("PAGE_URL") ? null : define("PAGE_URL", "jamesmellor.es");
 defined("PAGE_TITLE") ? null : define("PAGE_TITLE", "James Mellor - Software Developer");
 defined("ABOUT_TITLE") ? null : define("ABOUT_TITLE", "About Me");
 
-// Navbars
-defined("NAVBAR_ABOUT") ? null : define("NAVBAR_ABOUT", ['en' => 'About', 'es' => 'Sobre Mi']);
-defined("NAVBAR_CONTACT") ? null : define("NAVBAR_CONTACT", ['en' => 'Contact', 'es' => 'Contacto']);
-defined("NAVBAR_LANGUAGE") ? null : define("NAVBAR_LANGUAGE", ['en' => 'Language', 'es' => 'Idioma']);
-defined("NAVBAR_MYWORK") ? null : define("NAVBAR_MYWORK", ['en' => 'My Work', 'es' => 'Proyectos']);
-defined("NAVBAR_LIGHTDARK") ? null : define("NAVBAR_LIGHTDARK", ['en' => 'Lights', 'es' => 'Luz']);
-defined("NAVBAR_TERMINAL") ? null : define("NAVBAR_TERMINAL", ['en' => 'Terminal', 'es' => 'Terminal']);
 
-// No windows open section
-defined("SECTION_NOWINDOWS") ? null : define("SECTION_NOWINDOWS", ['en' => 'Click an icon to continue.', 'es' => 'Elige una opción para continuar.']);
+// ===== NAVBARS LEFT AND RIGHT ===== //
+defined("NAVBAR_ABOUT") ? null : define("NAVBAR_ABOUT",
+[
+    'en' => 'About',
+    'es' => 'Sobre Mi'
+]);
+defined("NAVBAR_CONTACT") ? null : define("NAVBAR_CONTACT",
+[
+    'en' => 'Contact',
+    'es' => 'Contacto'
+]);
+defined("NAVBAR_LANGUAGE") ? null : define("NAVBAR_LANGUAGE",
+[
+    'en' => 'Language',
+    'es' => 'Idioma'
+]);
+defined("NAVBAR_MYWORK") ? null : define("NAVBAR_MYWORK",
+[
+    'en' => 'My Work',
+    'es' => 'Proyectos'
+]);
+defined("NAVBAR_LIGHTDARK") ? null : define("NAVBAR_LIGHTDARK",
+[
+    'en' => 'Lights',
+    'es' => 'Luz'
+]);
+defined("NAVBAR_TERMINAL") ? null : define("NAVBAR_TERMINAL",
+[
+    'en' => 'Terminal',
+    'es' => 'Terminal'
+]);
 
-// About window
-defined("SECTION_ABOUT_TITLE") ? null : define("SECTION_ABOUT_TITLE", ['en' => PAGE_URL."/"."about", 'es' => PAGE_URL."/"."sobre-mi"]);
+
+// ===== NO WINDOWS OPEN ===== //
+defined("SECTION_NOWINDOWS") ? null : define("SECTION_NOWINDOWS",
+[
+    'en' => 'Click an icon to continue.',
+    'es' => 'Elige una opción para continuar.'
+]);
+
+
+// ===== ABOUT WINDOW ===== //
+defined("SECTION_ABOUT_LEFT_HEADING") ? null : define("SECTION_ABOUT_LEFT_HEADING",
+[
+    'en' => 'Hello.',
+    'es' => 'Hola.'
+]);
+defined("SECTION_ABOUT_LEFT_PARAGRAPHS_BOTTOM") ? null : define("SECTION_ABOUT_LEFT_PARAGRAPHS_BOTTOM",
+[
+    [
+        'en' => "However, I believe labels are restricting.",
+        'es' => 'Sin embargo, no quiero meterme en una caja y restringirme con un título oficial.'
+    ],
+    [
+        'en' => "While I'm best at full-stack at the moment, this may change in the future.",
+        'es' => "Aunque mis habilidades se basen en full-stack, puede que eso cambie en un futuro."
+    ],
+    [
+        'en' => "I'm interested in many aspects of programming, design, and development.",
+        'es' => "Me interesa una gran variedad de los diferentes aspectos de la programación y del desarrollo."
+    ],
+    [
+        'en' => "In the past, I've used C++, MATLAB, BASIC, and IBM RPG.",
+        'es' => 'En el pasado he usado C++, MATLAB, BASIC, y RPG de IBM.'
+    ],
+    [
+        'en' => "At the moment I'm interested in learning Laravel, improving my JavaScript skills,
+        eventually building some React proejcts, and potentially learning a lower-level
+        language such as C.",
+        'es' => 'Actualmente estoy interesado en aprender Laravel, mejorar mis habilidades de JavaScript,
+        y, eventualmente, construir unos proyectos de React. También estoy pensando en aprender un lenguaje
+        de programación más cercano al procesador - C, por ejemplo.'
+    ]
+]);
+defined("SECTION_ABOUT_LEFT_PARAGRAPHS_TOP") ? null : define("SECTION_ABOUT_LEFT_PARAGRAPHS_TOP",
+[
+    [
+        'en' => "I'm James, and I'm a software developer.",
+        'es' => 'Me llamo James y soy Programador y Desarrollador de software.'
+    ],
+    [
+        'en' => 'I use programming languages and development tools to produce computer applications.',
+        'es' => 'Uso lenguajes de programación y herramientas de desarrollo para crear aplicaciones.'
+    ],
+    [
+        'en' => "'Full-stack developer' is more accurate - I've mostly worked on systems with
+        JavaScript frontends, PHP backends, and SQL databases.",
+        'es' => "Un título más exacto sería 'Desarrollador de full-stack' - más que nada he trabajado en sístemas con
+        front-end de JavaScript, back-end de PHP, y bases de datos de SQL."
+    ],
+    [
+        'en' => "Here are some of my skills and my confidence level with them.",
+        'es' => 'Abajo se puede ver algunas de mis habilidades y que tan seguro me siento con dichas habilidades.'
+    ]
+]);
+defined("SECTION_ABOUT_RIGHT_FROM") ? null : define("SECTION_ABOUT_RIGHT_FROM",
+[
+    'en' => 'United Kingdom',
+    'es' => 'Reino Unido'
+]);
+defined("SECTION_ABOUT_RIGHT_LANGUAGES") ? null : define("SECTION_ABOUT_RIGHT_LANGUAGES",
+[
+    'en' => 'Languages',
+    'es' => 'Idiomas'
+]);
 defined("SECTION_ABOUT_SKILLS") ? null : define("SECTION_ABOUT_SKILLS",
 [
     'PHP' => 75,
@@ -25,8 +118,14 @@ defined("SECTION_ABOUT_SKILLS") ? null : define("SECTION_ABOUT_SKILLS",
     'Sass / SCSS' => 90,
     'jQuery' => 90,
     'JavaScript' => 50,
-    'UI Design' => 60
+    'UI' => 60
 ]);
+defined("SECTION_ABOUT_TITLE") ? null : define("SECTION_ABOUT_TITLE",
+[
+    'en' => PAGE_URL."/"."about",
+    'es' => PAGE_URL."/"."sobre-mi"
+]);
+
 
 // Contact window
 defined("SECTION_CONTACT_TITLE") ? null : define("SECTION_CONTACT_TITLE", ['en' => PAGE_URL."/"."contact", 'es' => PAGE_URL."/"."contacto"]);
