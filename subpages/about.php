@@ -15,8 +15,9 @@
                 Hello.
             </h1>
             <div class="terminal-about-content-left-paragraph">
-                <p>I'm James Mellor, a software developer from the UK.</p>
-                <p>"Full-stack developer" would be more accurate as I've mostly worked on systems with
+                <p>I'm James, and I'm a software developer.</p>
+                <p>I use programming languages and development tools to produce computer applications.</p>
+                <p>"Full-stack developer" is more accurate - I've mostly worked on systems with
                 JavaScript frontends, PHP backends, and SQL databases.</p>
                 <p>Here are some of my skills and my confidence level with them.</p>
             </div>
@@ -37,10 +38,15 @@
                 <?php } ?>
             </div>
             <div class="terminal-about-content-left-paragraph">
-                <p>Labels are quite restricting, though, and while I'm best at full-stack at the moment, this may change
-                in the future, as I'm interested in many aspects of programming, design, and development.</p>
-                <p>I've also used C++, MATLAB, BASIC, and IBM RPG.<p>
-                <p>I'm interested in Laravel aaaa others</p>
+                <p>However, I believe labels are restricting.</p>
+                <p>While I'm best at full-stack at the moment, this may change in the future.</p>
+                <p>I'm interested in many aspects of programming, design, and development.</p>
+                <p>In the past, I've used C++, MATLAB, BASIC, and IBM RPG.<p>
+                <p>
+                    At the moment I'm interested in learning Laravel, improving my JavaScript skills,
+                    eventually building some React proejcts, and potentially learning a lower-level
+                    language such as C.
+                </p>
             </div>
         </div>
 
@@ -52,7 +58,7 @@
                 Barcelona, ES
             </div>
             <div class="terminal-about-content-right-languages">
-                I speak
+                Languages
                 <div>
                     <img class="terminal-about-content-right-languages-img" src="img/uk.png" alt="English">
                     <img class="terminal-about-content-right-languages-img" src="img/spain.png" alt="Spanish">

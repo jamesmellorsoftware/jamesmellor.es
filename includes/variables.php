@@ -24,7 +24,8 @@ defined("SECTION_ABOUT_SKILLS") ? null : define("SECTION_ABOUT_SKILLS",
     'CSS' => 90,
     'Sass / SCSS' => 90,
     'jQuery' => 90,
-    'JavaScript' => 50
+    'JavaScript' => 50,
+    'UI Design' => 60
 ]);
 
 // Contact window
