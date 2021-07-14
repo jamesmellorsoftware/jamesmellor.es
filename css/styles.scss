@@ -17,9 +17,18 @@ body {
     width: 100vw;
 }
 
+// ===== REMOVE DEFAULT STYLES ===== //
 a {
     color: rgb(0,0,0);
     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
 }
 
 // ===== LANDING PAGE ===== //
@@ -192,6 +201,97 @@ a {
     z-index: 2;
 
     // ===== INDIVIDUAL WINDOWS ===== //
+    &-about {
+        &-content {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 1fr;
+            padding-bottom: 20px;
+            padding-top: 20px;
+
+            &-left {
+                grid-column: 1 / 2;
+                grid-row: 1 / -1;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                &-heading {
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                &-paragraph {
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                &-presenttech {
+                    margin-bottom: 10px;
+                    &-skill {
+                        color: rgb(255,255,255);
+                        display: flex;
+                        margin-bottom: 8px;
+                        margin-top: 8px;
+                        width: 100%;
+                        &-amount {
+                            background-color: lighten($primary-5, 15%);
+                        }
+                        &-label {
+                            background-color: darken($primary-5, 40%);
+                            display: inline-block;
+                            text-align: center;
+                            width: 120px;
+                        }
+                        &-percent {
+                            background-color: lighten($grey, 30%);
+                        }
+                        &-percentage {
+                            background-color: rgb(255,255,255);
+                            color: $grey;
+                            text-align: right;
+                            width: 60px;
+                        }
+                        background-color: $primary-5;
+                        width: 100%;
+                    }
+                    
+                }
+            }
+
+            &-right {
+                align-items: center;
+                display: flex;
+                border-left: 2px solid $grey;
+                flex-direction: column;
+                grid-column: 2 / 3;
+                grid-row: 1 / -1;
+                justify-content: space-around;
+
+                &-languages {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &-img {
+                        height: 70px;
+                        width: 70px;
+                    }
+                }
+
+                &-location {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    &-img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+
     &-contact {
         &-content {
             display: grid;

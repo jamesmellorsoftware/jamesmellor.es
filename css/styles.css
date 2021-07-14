@@ -20,6 +20,14 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .landing {
   min-height: 100%;
   min-width: 100%;
@@ -308,6 +316,136 @@ a {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
   }
+}
+
+.terminal-about-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.terminal-about-content-left {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.terminal-about-content-left-heading {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.terminal-about-content-left-paragraph {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.terminal-about-content-left-presenttech {
+  margin-bottom: 10px;
+}
+
+.terminal-about-content-left-presenttech-skill {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 100%;
+  background-color: #6FFFE9;
+  width: 100%;
+}
+
+.terminal-about-content-left-presenttech-skill-amount {
+  background-color: #bcfff5;
+}
+
+.terminal-about-content-left-presenttech-skill-label {
+  background-color: #00a289;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+.terminal-about-content-left-presenttech-skill-percent {
+  background-color: #bcc1c6;
+}
+
+.terminal-about-content-left-presenttech-skill-percentage {
+  background-color: white;
+  color: #6c757d;
+  text-align: right;
+  width: 60px;
+}
+
+.terminal-about-content-right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 2px solid #6c757d;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.terminal-about-content-right-languages {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.terminal-about-content-right-languages-img {
+  height: 70px;
+  width: 70px;
+}
+
+.terminal-about-content-right-location {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.terminal-about-content-right-location-img {
+  height: 30px;
+  width: 30px;
 }
 
 .terminal-contact-content {

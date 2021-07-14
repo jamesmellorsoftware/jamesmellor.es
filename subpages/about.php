@@ -9,64 +9,55 @@
     </div>
 
     <div class="terminal-content terminal-about-content">
-        <div class="terminal-about-content-section terminal-about-content-intro">
-            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-1">
-                I'm a software developer
-            </span>
-            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-1"
-            src="img/code.png" alt="Code">
-            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-2">
-                from the UK
-            </span>
-            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-2"
-            src="img/united-kingdom.png" alt="UK">
-            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-3">
-                currently in: Barcelona
-            </span>
-            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-3"
-            src="img/sagrada-familia.png" alt="Barcelona">
+
+        <div class="terminal-about-content-left">
+            <h1 class="terminal-about-content-left-heading">
+                Hello.
+            </h1>
+            <div class="terminal-about-content-left-paragraph">
+                <p>I'm James Mellor, a software developer from the UK.</p>
+                <p>"Full-stack developer" would be more accurate as I've mostly worked on systems with
+                JavaScript frontends, PHP backends, and SQL databases.</p>
+                <p>Here are some of my skills and my confidence level with them.</p>
+            </div>
+            <div class="terminal-about-content-left-presenttech">
+                <?php foreach (SECTION_ABOUT_SKILLS as $skill => $percentage) { ?>
+                    <div class="terminal-about-content-left-presenttech-skill">
+                        <span class="terminal-about-content-left-presenttech-skill-label">
+                            <?php echo $skill; ?>
+                        </span>
+                        <span class="terminal-about-content-left-presenttech-skill-amount"
+                        style="width: <?php echo $percentage; ?>%">&nbsp;</span>
+                        <span class="terminal-about-content-left-presenttech-skill-percent"
+                        style="width: <?php echo 100 - $percentage; ?>%">&nbsp;</span>
+                        <span class="terminal-about-content-left-presenttech-skill-percentage">
+                            <?php echo $percentage; ?>%
+                        </span>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="terminal-about-content-left-paragraph">
+                <p>Labels are quite restricting, though, and while I'm best at full-stack at the moment, this may change
+                in the future, as I'm interested in many aspects of programming, design, and development.</p>
+                <p>I've also used C++, MATLAB, BASIC, and IBM RPG.<p>
+                <p>I'm interested in Laravel aaaa others</p>
+            </div>
         </div>
-        <div class="terminal-about-content-section terminal-about-content-languages">
-            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-1">
+
+        <div class="terminal-about-content-right">
+            <div class="terminal-about-content-right-location">
+                <img class="terminal-about-content-right-location-img" src="img/passport.png" alt="Passport">
+                United Kingdom<br>
+                <img class="terminal-about-content-right-location-img" src="img/pin.png" src="Location">
+                Barcelona, ES
+            </div>
+            <div class="terminal-about-content-right-languages">
                 I speak
-            </span>
-            <img class="terminal-about-content-languages-image terminal-about-content-languages-image-1"
-            src="img/united-kingdom.png" alt="English">
-            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-2">
-                English 5/5
-            </span>
-            <img class="terminal-about-content-languages-image terminal-about-content-languages-image-2"
-            src="img/spain.png" alt="Spanish">
-            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-3">
-                Spanish 4/5
-            </span>
-        </div>
-        <div class="terminal-about-content-section terminal-about-content-paragraph">
-            <p>
-                If you wanted to pin me to a more detailed title,
-                "full-stack developer" would be the most accurate.
-            </p>
-            <p>
-                I've mostly worked on systems with JavaScript frontends,
-                PHP backends, and SQL databases.
-            </p>
-            <p>
-                Labels are quite restricting, though, and while I'm best atfull-stack at the moment, this may change
-                in the future, as I'm interested in many aspects of programming, design, and development.
-            </p>
-            
-        </div>
-        <div class="terminal-about-content-section terminal-about-content-mytechnologies">
-            myetch
-        </div>
-        <div class="terminal-about-content-section terminal-about-content-pasttechnologies">
-            pasttech
-        </div>
-        <div class="terminal-about-content-section terminal-about-content-futuretechnologies">
-            futuretech
-        </div>
-        <div class="terminal-about-content-section terminal-about-content-freetime">
-            freetime
+                <div>
+                    <img class="terminal-about-content-right-languages-img" src="img/uk.png" alt="English">
+                    <img class="terminal-about-content-right-languages-img" src="img/spain.png" alt="Spanish">
+                </div>
+            </div>
         </div>
     </div>
 </section>

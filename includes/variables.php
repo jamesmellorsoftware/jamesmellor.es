@@ -16,6 +16,16 @@ defined("SECTION_NOWINDOWS") ? null : define("SECTION_NOWINDOWS", ['en' => 'Clic
 
 // About window
 defined("SECTION_ABOUT_TITLE") ? null : define("SECTION_ABOUT_TITLE", ['en' => PAGE_URL."/"."about", 'es' => PAGE_URL."/"."sobre-mi"]);
+defined("SECTION_ABOUT_SKILLS") ? null : define("SECTION_ABOUT_SKILLS",
+[
+    'PHP' => 75,
+    'SQL' => 75,
+    'HTML' => 100,
+    'CSS' => 90,
+    'Sass / SCSS' => 90,
+    'jQuery' => 90,
+    'JavaScript' => 50
+]);
 
 // Contact window
 defined("SECTION_CONTACT_TITLE") ? null : define("SECTION_CONTACT_TITLE", ['en' => PAGE_URL."/"."contact", 'es' => PAGE_URL."/"."contacto"]);
