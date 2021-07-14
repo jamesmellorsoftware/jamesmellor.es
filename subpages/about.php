@@ -9,60 +9,64 @@
     </div>
 
     <div class="terminal-content terminal-about-content">
-        <h1>About me</h1>
-        <p>
-            From a very young age, I have always been interested in computers.
-            I was obsessed with the old Windows 95 computer in my classroom at infant school
-            - I actually learned to type before I learned to write using a pen and paper.
-        </p>
-        <p>
-            Unfortunately this now means that everyone in my family asks me to fix their broken devices,
-            which is probably one of the reasons why I moved out of my home country in the end.
-        </p>
-        <p>
-            People still request strange things from me - one acquaintance of mine from Cuba even offered to pay me half of the profit gained from a Trojan virus if I agreed to develop it - I didn’t end up doing this for him, but this didn’t stop my obsession, which has carried on until today.
-        </p>
-        
-        <h1>Who am I?</h1>
-        <p>
-            I'm a software developer based in Barcelona, Spain.
-        </p>
-        <p>
-            If you wanted to pin me to a more detailed title "full-stack developer" would be the most accurate.
-            I've mostly worked on systems with JavaScript frontends, PHP backends, and SQL databases.
-            Labels are quite restricting, though, and while I'm best at full-stack at the moment, this may change
-            in the future, as I'm interested in many aspects of programming, design, and development.
-        </p>
-        <p>
-            Technologies I know and my confidence with them:
-            <ul>
-                <li>PHP 4/5</li>
-                <li>SQL 4/5</li>
-                <li>JavaScript 3/5</li>
-                <li>jQuery 4/5</li>
-                <li>HTML 5/5</li>
-                <li>CSS 4/5</li>
-                <li>SCSS / Sass 5/5</li>
-                <li>GIT 2/5</li>
-                <li>UI Design 2/5</li>
-            </ul>
-
-            Technologies I've touched in the past:
-            <ul>
-                <li>MATLAB</li>
-                <li>C++</li>
-                <li>ZX Spectrum BASIC</li>
-                <li>Microsoft Visual BASIC</li>
-            </ul>
-
-            Technologies I'm interested in learning in the future:
-            <ul>
-                <li>Python</li>
-                <li>C</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-            </ul>
-        </p>
+        <div class="terminal-about-content-section terminal-about-content-intro">
+            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-1">
+                I'm a software developer
+            </span>
+            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-1"
+            src="img/code.png" alt="Code">
+            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-2">
+                from the UK
+            </span>
+            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-2"
+            src="img/united-kingdom.png" alt="UK">
+            <span class="terminal-about-content-intro-text terminal-about-content-intro-text-3">
+                currently in: Barcelona
+            </span>
+            <img class="terminal-about-content-intro-image terminal-about-content-intro-image-3"
+            src="img/sagrada-familia.png" alt="Barcelona">
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-languages">
+            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-1">
+                I speak
+            </span>
+            <img class="terminal-about-content-languages-image terminal-about-content-languages-image-1"
+            src="img/united-kingdom.png" alt="English">
+            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-2">
+                English 5/5
+            </span>
+            <img class="terminal-about-content-languages-image terminal-about-content-languages-image-2"
+            src="img/spain.png" alt="Spanish">
+            <span class="terminal-about-content-languages-text terminal-about-content-languages-text-3">
+                Spanish 4/5
+            </span>
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-paragraph">
+            <p>
+                If you wanted to pin me to a more detailed title,
+                "full-stack developer" would be the most accurate.
+            </p>
+            <p>
+                I've mostly worked on systems with JavaScript frontends,
+                PHP backends, and SQL databases.
+            </p>
+            <p>
+                Labels are quite restricting, though, and while I'm best atfull-stack at the moment, this may change
+                in the future, as I'm interested in many aspects of programming, design, and development.
+            </p>
+            
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-mytechnologies">
+            myetch
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-pasttechnologies">
+            pasttech
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-futuretechnologies">
+            futuretech
+        </div>
+        <div class="terminal-about-content-section terminal-about-content-freetime">
+            freetime
+        </div>
     </div>
 </section>
