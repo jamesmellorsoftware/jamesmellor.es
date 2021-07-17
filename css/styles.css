@@ -631,6 +631,10 @@ p {
       grid-template-rows: repeat(2, 1fr);
 }
 
+.terminal-portfolio-content-row:hover {
+  background-color: #6FFFE9;
+}
+
 .terminal-portfolio-content-row-image {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -644,11 +648,11 @@ p {
 }
 
 .terminal-portfolio-content-row-even {
-  background-color: #a2fff1;
+  background-color: white;
 }
 
 .terminal-portfolio-content-row-odd {
-  background-color: #3cffe1;
+  background-color: #d8dbdd;
 }
 
 .terminal-portfolio-content-row-text {

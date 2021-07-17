@@ -402,6 +402,9 @@ p {
             }
 
             &-row {
+                &:hover {
+                    background-color: $primary-5;
+                }
                 cursor: pointer;
                 display: grid;
                 grid-template-columns: 50% 1fr;
@@ -414,8 +417,8 @@ p {
                         max-width: 100%;
                     }
                 }
-                &-even { background-color: lighten($primary-5, 10%); }
-                &-odd { background-color: darken($primary-5, 10%); }
+                &-even { background-color: lighten($grey, 60%); }
+                &-odd { background-color: lighten($grey, 40%); }
                 &-text {
                     align-items: center;
                     display: flex;

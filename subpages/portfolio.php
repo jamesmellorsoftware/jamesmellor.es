@@ -10,8 +10,10 @@
 
     <div class="terminal-content terminal-portfolio-content">
         
+        <?php $i = 0; ?>
         <?php foreach (SECTION_PORTFOLIO_ROWS as $portfolio_row) : ?>
-            <div class="terminal-portfolio-content-row terminal-portfolio-content-row-even">
+            <div class="terminal-portfolio-content-row terminal-portfolio-content-row-even
+            <?php echo ($i === 1) ? "terminal-portfolio-content-row-even" : "terminal-portfolio-content-row-odd"; ?>">
                 <div class="terminal-portfolio-content-row-image">
                     <img class="terminal-portfolio-content-row-image-img"
                     src="<?php echo "img/portfolio/".$portfolio_row['title']."/main.jpg"; ?>"
@@ -35,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            <?php $i === 0 ? $i = 1 : $i = 0; ?>
         <?php endforeach; ?>
 
     </div>
