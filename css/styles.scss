@@ -24,6 +24,13 @@ a {
     text-decoration: none;
 }
 
+button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -428,6 +435,55 @@ p {
                     justify-content: space-evenly;
                     &-title { text-transform: uppercase; }
                 }
+            }
+        }
+
+        &_modal {
+            display: block;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            z-index: 5000;
+
+            &-content {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                &-imagecontainer {
+                    height: 100%;
+                    position: relative;
+                    width: 100%;
+
+                    &-buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        
+                        &-button {
+                            background-color: $grey;
+                            color: rgb(255,255,255);
+                            cursor: pointer;
+                            font-size: 1rem;
+                            padding: 15px;
+                            &:hover {
+                                background-color: $primary-1;
+                                color: $primary-5;
+                            }
+                        }
+                    }
+
+                    &-image {
+                        max-width: 100%;
+                    }
+                }
+
+                &-longdesc {
+                    align-self: flex-start;
+                }
+
+                &-title { text-transform: uppercase; }
             }
         }
     }

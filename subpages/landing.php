@@ -11,6 +11,7 @@
                 require_once("about.php");
                 require_once("contact.php");
                 require_once("portfolio.php");
+                require_once("portfolio_modal.php");
                 require_once("minimise_bar.php")
             ?>
         </div>
