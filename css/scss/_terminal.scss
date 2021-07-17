@@ -1,0 +1,86 @@
+// ===== WINDOWS ===== //
+.terminal {
+    // ===== GENERAL WINDOW STYLES ===== //
+    @media screen and (min-width: $mobile_width) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    @media screen and (max-width: $mobile_width) {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+    }
+    background-color: rgba(255, 255, 255, 0.98);
+    display: none;
+    font-family: 'Lato', sans-serif;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.8rem 1fr;
+    overflow-y: hidden;
+    z-index: 2;
+
+    // ===== GENERAL TOPBAR STYLES ===== //
+    &-topbar {
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        color: $grey;
+        cursor: default;
+        display: flex;
+        font-family: 'Courier New', 'Courier New', Courier, monospace;
+        font-size: 1.2rem;
+        font-weight: 800;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: space-between;
+        letter-spacing: 2px;
+
+        &__dark {
+            background-color: rgb(0, 0, 0);
+            border: 1px solid rgb(255,255,255);
+        }
+
+        &-controls {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &-control {
+                padding-left: 5px;
+                padding-right: 5px;
+                transition: transform 0.1s;
+
+                &:hover {
+                    background-color: $primary-1;
+                    color: $primary-5;
+                }
+
+                &:active,
+                &:focus {
+                    background-color: lighten($primary-1, 30%);
+                    transform: scale(0.9) translateY(3px);
+                }
+
+            }
+        }
+
+        &-text {
+            font-size: 0.8rem;
+            padding-left: 10px;
+        }
+
+    }
+
+    // ===== GENERAL CONTENT STYLES ===== //
+    &-content {
+        max-height: 100%;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        overflow-y: scroll;
+    }
+
+    // ===== INDIVIDUAL WINDOWS ===== //
+    @import "_about";
+    @import "_contact";
+    @import "_home";
+    @import "_portfolio";
+}

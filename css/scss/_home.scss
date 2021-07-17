@@ -1,0 +1,11 @@
+&-home {
+    background-color: rgba(0,0,0,0.9);
+    border: 1px solid rgb(255, 255, 255);
+    color: $primary-5;
+    display: grid;
+
+    &-content {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+}
