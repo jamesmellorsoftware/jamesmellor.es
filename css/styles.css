@@ -604,6 +604,77 @@ p {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.terminal-portfolio-content {
+  padding-bottom: 80px;
+}
+
+.terminal-portfolio-content-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.terminal-portfolio-content-row {
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 1fr;
+      grid-template-columns: 50% 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.terminal-portfolio-content-row-image {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.terminal-portfolio-content-row-image-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.terminal-portfolio-content-row-even {
+  background-color: #a2fff1;
+}
+
+.terminal-portfolio-content-row-odd {
+  background-color: #3cffe1;
+}
+
+.terminal-portfolio-content-row-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.terminal-portfolio-content-row-text-title {
+  text-transform: uppercase;
+}
+
 .terminal-topbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -616,6 +687,7 @@ p {
   display: flex;
   font-family: 'Courier New', 'Courier New', Courier, monospace;
   font-size: 1.2rem;
+  font-weight: 800;
   grid-column: 1 / -1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;

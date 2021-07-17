@@ -9,6 +9,33 @@
     </div>
 
     <div class="terminal-content terminal-portfolio-content">
-        <h1>Portfolio</h1>
+        
+        <?php foreach (SECTION_PORTFOLIO_ROWS as $portfolio_row) : ?>
+            <div class="terminal-portfolio-content-row terminal-portfolio-content-row-even">
+                <div class="terminal-portfolio-content-row-image">
+                    <img class="terminal-portfolio-content-row-image-img"
+                    src="<?php echo "img/portfolio/".$portfolio_row['title']."/main.jpg"; ?>"
+                    alt="<?php echo $portfolio_row['title']; ?>">
+                </div>
+                <div class="terminal-portfolio-content-row-text">
+                    <h2 class="terminal-portfolio-content-row-text-title">
+                        <?php echo $portfolio_row['title']; ?>
+                    </h2>
+                    <?php foreach($portfolio_row['subtitle'] as $lang => $output) { ?>
+                        <h3 class="terminal-portfolio-content-row-text-subtitle" lang="<?php echo $lang; ?>">
+                            <?php echo $output; ?>
+                        </h3>
+                    <?php } ?>
+                    <div class="terminal-portfolio-content-row-text-technologies">
+                        <?php foreach($portfolio_row['technologies'] as $technology) { ?>
+                            <span class="terminal-portfolio-content-row-text-technologies-technology">
+                                <?php echo $technology; ?>
+                            </span>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
     </div>
 </section>

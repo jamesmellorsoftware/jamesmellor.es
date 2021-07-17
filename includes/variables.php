@@ -133,8 +133,29 @@ defined("SECTION_CONTACT_EMAIL") ? null : define("SECTION_CONTACT_EMAIL", "mello
 defined("SECTION_CONTACT_LINKEDIN") ? null : define("SECTION_CONTACT_LINKEDIN", "mellor29j");
 defined("SECTION_CONTACT_LINKEDIN_URL") ? null : define("SECTION_CONTACT_LINKEDIN_URL", "https://www.linkedin.com/in/".SECTION_CONTACT_LINKEDIN);
 
+
 // Portfolio window
 defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE", ['en' => PAGE_URL."/"."my-work", 'es' => PAGE_URL."/"."mis-proyectos"]);
+defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
+[
+    [
+        'title' => 'galleri',
+        'subtitle' => ['en' => 'Gallery with CMS', 'es' => 'Galeria con CMS'],
+        'technologies' => ['PHP', 'JavaScript', 'jQuery', 'SQL', 'HTML', 'CSS']
+    ],
+    [
+        'title' => 'tipcalc',
+        'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
+        'technologies' => ['JavaScript', 'HTML', 'CSS']
+    ],
+    [
+        'title' => 'pub quiz',
+        'subtitle' => ['en' => 'Quiz Game', 'es' => 'Juego de Quiz'],
+        'technologies' => ['JavaScript', 'HTML', 'CSS']
+    ]
+]
+);
+
 
 // Settings window
 defined("SECTION_SETTINGS_TITLE") ? null : define("SECTION_SETTINGS_TITLE", ['en' => PAGE_URL."/"."settings", 'es' => PAGE_URL."/"."configuración"]);

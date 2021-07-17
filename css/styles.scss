@@ -390,6 +390,45 @@ p {
 
     }
 
+    &-portfolio {
+        &-content {
+            padding-bottom: 80px;
+            &-header {
+                align-items: center;
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+
+            &-row {
+                cursor: pointer;
+                display: grid;
+                grid-template-columns: 50% 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                &-image {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / -1;
+                    &-img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+                }
+                &-even { background-color: lighten($primary-5, 10%); }
+                &-odd { background-color: darken($primary-5, 10%); }
+                &-text {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    grid-column: 2 / 3;
+                    grid-row: 1 / -1;
+                    justify-content: space-evenly;
+                    &-title { text-transform: uppercase; }
+                }
+            }
+        }
+    }
+
     // ===== GENERAL TOPBAR STYLES ===== //
     &-topbar {
         align-items: center;
@@ -399,6 +438,7 @@ p {
         display: flex;
         font-family: 'Courier New', 'Courier New', Courier, monospace;
         font-size: 1.2rem;
+        font-weight: 800;
         grid-column: 1 / -1;
         grid-row: 1 / 2;
         justify-content: space-between;
