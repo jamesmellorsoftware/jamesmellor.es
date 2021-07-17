@@ -1,0 +1,11 @@
+// ===== WINDOW TOPBAR BUTTONS ===== //
+.minimise { @media screen and (max-width: $mobile_width) { display: none !important; } }
+.maximise { @media screen and (max-width: $mobile_width) { display: none !important; } }
+.restore {
+    @media screen and (max-width: $mobile_width) { display: none !important; }
+    display: none;
+}
+.close {
+    background-color: $danger-red;
+    &:hover { background-color: darken($danger-red, 30%) !important; }
+}

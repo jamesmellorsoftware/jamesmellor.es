@@ -1,0 +1,12 @@
+// ===== MINIMISE BAR ===== //
+.minimise_bar {
+    @media screen and (min-width: $mobile_width) {
+        align-items: flex-end;
+        display: flex;
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    @media screen and (max-width: $mobile_width) {
+        display: none;
+    }
+}
