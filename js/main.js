@@ -30,9 +30,25 @@ $(document).ready(function(){
         changeLanguage($(this));
     });
 
+    $(".portfolio_row").on("click", function(){
+        openPortfolioModal($(this));
+    });
+
     $(".terminal-contact-content-icons-icon").on("click", function(){
         window.location = $(this).attr("href");
     });
+
+
+    function openPortfolioModal(row_clicked) {
+        // Show the portfolio modal
+        $("#portfolio_modal").fadeIn(100);
+        $("#portfolio_modal").css("z-index", "2");
+        $(".terminal").not("#portfolio_modal").css("z-index", "1");
+
+        // Change portfolio modal title, subtitle, and technologies
+        // AJAX to server to find these
+        $("#portfolio_modal").find(".terminal-topbar-text").html();
+    }
 
 
     function changeLanguage(language_button) {

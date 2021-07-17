@@ -12,7 +12,7 @@
         
         <?php $i = 0; ?>
         <?php foreach (SECTION_PORTFOLIO_ROWS as $portfolio_row) : ?>
-            <div class="terminal-portfolio-content-row terminal-portfolio-content-row-even
+            <div class="terminal-portfolio-content-row portfolio_row
             <?php echo ($i === 1) ? "terminal-portfolio-content-row-even" : "terminal-portfolio-content-row-odd"; ?>">
                 <div class="terminal-portfolio-content-row-image">
                     <img class="terminal-portfolio-content-row-image-img"

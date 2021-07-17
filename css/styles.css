@@ -559,10 +559,8 @@ p {
 }
 
 .terminal-portfolio_modal {
-  display: block;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  z-index: 5000;
 }
 
 .terminal-portfolio_modal-content {

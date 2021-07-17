@@ -1,11 +1,16 @@
-<section href="portfolio_modal" class="terminal terminal-portfolio_modal">
+<section href="portfolio_modal" class="terminal terminal-portfolio_modal" id="portfolio_modal">
     <div class="terminal-topbar terminal-portfolio_modal-topbar terminal-topbar__dark">
         <?php // foreach (SECTION_PORTFOLIO_TITLE as $lang => $output) { ?>
-            <span class="terminal-topbar-text terminal-topbar-portfolio-text">
+            <span class="terminal-topbar-text terminal-topbar-portfolio_modal-text">
                 <?php // echo $output; ?>title
             </span>
         <?php // } ?>
-        <?php require("includes/terminal_topbar.php"); ?>
+        <span class="terminal-topbar-controls">
+            <span class="terminal-topbar-controls-control
+            terminal-topbar-contact-controls-control close">
+                &times;
+            </span>
+        </span>
     </div>
 
     <div class="terminal-content terminal-portfolio_modal-content">
