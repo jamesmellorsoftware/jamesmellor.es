@@ -138,21 +138,30 @@ defined("SECTION_CONTACT_LINKEDIN_URL") ? null : define("SECTION_CONTACT_LINKEDI
 defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE", ['en' => PAGE_URL."/"."my-work", 'es' => PAGE_URL."/"."mis-proyectos"]);
 defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 [
-    [
-        'title' => 'galleri',
-        'subtitle' => ['en' => 'Gallery with CMS', 'es' => 'Galeria con CMS'],
-        'technologies' => ['PHP', 'JavaScript', 'jQuery', 'SQL', 'HTML', 'CSS']
-    ],
-    [
-        'title' => 'tipcalc',
-        'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
-        'technologies' => ['JavaScript', 'HTML', 'CSS']
-    ],
-    [
-        'title' => 'pub quiz',
-        'subtitle' => ['en' => 'Quiz Game', 'es' => 'Juego de Quiz'],
-        'technologies' => ['JavaScript', 'HTML', 'CSS']
-    ]
+    "galleri" =>
+        [
+            'title' => 'galleri',
+            'subtitle' => ['en' => 'Gallery with CMS', 'es' => 'Galeria con CMS'],
+            'technologies' => ['PHP', 'JavaScript', 'jQuery', 'SQL', 'HTML', 'CSS'],
+            'images' => [],
+            'description' => []
+        ],
+    "tipcalc" =>
+        [
+            'title' => 'tipcalc',
+            'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
+            'technologies' => ['JavaScript', 'HTML', 'CSS'],
+            'images' => [],
+            'description' => []
+        ],
+    "pub quiz" =>
+        [
+            'title' => 'pub quiz',
+            'subtitle' => ['en' => 'Quiz Game', 'es' => 'Juego de Quiz'],
+            'technologies' => ['JavaScript', 'HTML', 'CSS'],
+            'images' => [],
+            'description' => []
+        ]
 ]
 );
 

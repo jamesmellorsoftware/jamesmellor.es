@@ -34,20 +34,93 @@ $(document).ready(function(){
         openPortfolioModal($(this));
     });
 
+    $(".portfolio_modal_image_button").on("click", function(){
+        changePortfolioModalImage($(this));
+    });
+
     $(".terminal-contact-content-icons-icon").on("click", function(){
         window.location = $(this).attr("href");
     });
 
 
     function openPortfolioModal(row_clicked) {
-        // Show the portfolio modal
-        $("#portfolio_modal").fadeIn(100);
-        $("#portfolio_modal").css("z-index", "2");
-        $(".terminal").not("#portfolio_modal").css("z-index", "1");
 
-        // Change portfolio modal title, subtitle, and technologies
-        // AJAX to server to find these
-        $("#portfolio_modal").find(".terminal-topbar-text").html();
+        let project_to_retrieve = row_clicked.find(".portfolio_row_title").html();
+
+        $.ajax({
+            type: 'post',
+            url: 'includes/portfolio_modal_retrieve.php',
+            dataType: 'json',
+            data: {
+                "retrieve_project": true,
+                "project_to_retrieve": project_to_retrieve
+            },
+            success: function(project){
+                // ===== Get modal and its properties in variables so we can manipulate them ===== //
+                let modal = $("#portfolio_modal");
+                let modal_topbar_title = modal.find(".terminal-topbar-text");
+                let modal_project_title = modal.find(".portfolio_modal_title");
+                let modal_project_subtitle = modal.find(".portfolio_modal_subtitle");
+                let modal_project_description = modal.find(".portfolio_modal_description");
+                // let modal_project_images = modal.find(".portfolio_modal_images");
+
+                // ===== Clear modal data to avoid other projects interfering with new info ===== //
+                modal_topbar_title.html("");
+                modal_project_title.html("");
+                modal_project_subtitle.html("");
+                modal_project_description.html("");
+                // modal.images.html("");
+
+                // ===== Change modal data ===== //
+                // subtitle: after the title h1 element, add h3 elements for each language found
+                modal_project_title.html(project.title);
+                modal_topbar_title.html(project.title);
+                modal_project_description.html(project.description);
+                // modal_project_images.html(project.images);
+                // Object.entries(project.subtitle).forEach(function(subtitle){
+                //     const [key, value] = subtitle;
+                //     let new_subtitle =
+                // need to get a h3 template and replace its innerhtml and lang, then after() the title
+                // });
+                modal.find(".portfolio_modal_subtitle").html(project.subtitle.en);
+
+                // ===== Finally, show the portfolio modal ===== //
+                modal.fadeIn(100);
+                modal.css("z-index", "2");
+                $(".terminal").not("#portfolio_modal").css("z-index", "1");
+            },
+            error: function(response) {
+                console.log('AJAX Error:');
+                console.log(response);
+            }
+        });
+    }
+
+
+    function changePortfolioModalImage(button_clicked) {
+        let next_image = "";
+        let slide_direction = "";
+
+        let image = "terminal-portfolio_modal-content-imagecontainer-image";
+        let active_class = image+"--active"
+        let active_image = $("."+active_class);
+        
+        if (button_clicked.hasClass("next"))      { slide_direction = "next" }
+        else if (button_clicked.hasClass("prev")) { slide_direction = "prev" }
+        else                                      { return false; }
+
+        switch(slide_direction) {
+            case "next":
+                next_image = (active_image.next("."+image).length >= 1) ? active_image.next() : $("."+image).first();
+                break;
+            case "prev":
+                next_image = (active_image.prev("."+image).length >= 1) ? active_image.prev() : $("."+image).last();
+                break;
+
+        }
+
+        active_image.removeClass(active_class);
+        next_image.addClass(active_class);
     }
 
 

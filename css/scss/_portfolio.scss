@@ -74,7 +74,13 @@
                 }
 
                 &-image {
+                    display: none;
                     max-width: 100%;
+
+                    &--active {
+                        display: inline;
+                    }
+
                 }
             }
 

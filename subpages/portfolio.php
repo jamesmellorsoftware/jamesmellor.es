@@ -20,15 +20,16 @@
                     alt="<?php echo $portfolio_row['title']; ?>">
                 </div>
                 <div class="terminal-portfolio-content-row-text">
-                    <h2 class="terminal-portfolio-content-row-text-title">
+                    <h2 class="terminal-portfolio-content-row-text-title portfolio_row_title">
                         <?php echo $portfolio_row['title']; ?>
                     </h2>
                     <?php foreach($portfolio_row['subtitle'] as $lang => $output) { ?>
-                        <h3 class="terminal-portfolio-content-row-text-subtitle" lang="<?php echo $lang; ?>">
+                        <h3 class="terminal-portfolio-content-row-text-subtitle portfolio_row_subtitle"
+                        lang="<?php echo $lang; ?>">
                             <?php echo $output; ?>
                         </h3>
                     <?php } ?>
-                    <div class="terminal-portfolio-content-row-text-technologies">
+                    <div class="terminal-portfolio-content-row-text-technologies portfolio_row_technologies">
                         <?php foreach($portfolio_row['technologies'] as $technology) { ?>
                             <span class="terminal-portfolio-content-row-text-technologies-technology">
                                 <?php echo $technology; ?>

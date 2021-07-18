@@ -597,7 +597,12 @@ p {
 }
 
 .terminal-portfolio_modal-content-imagecontainer-image {
+  display: none;
   max-width: 100%;
+}
+
+.terminal-portfolio_modal-content-imagecontainer-image--active {
+  display: inline;
 }
 
 .terminal-portfolio_modal-content-longdesc {
