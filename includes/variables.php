@@ -143,8 +143,11 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'title' => 'galleri',
             'subtitle' => ['en' => 'Gallery with CMS', 'es' => 'Galeria con CMS'],
             'technologies' => ['PHP', 'JavaScript', 'jQuery', 'SQL', 'HTML', 'CSS'],
-            'images' => [],
-            'description' => []
+            'images' => [
+                'main.jpg', 'addesk1.jpg', 'addesk2.jpg', 'admob1.jpg', 'admob2.jpg',
+                'homedesk1.jpg', 'homedesk2.jpg'
+            ],
+            'description' => ['en' => 'yo we got a good desc here', 'es' => 'ay caramba']
         ],
     "tipcalc" =>
         [
@@ -152,7 +155,7 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
             'technologies' => ['JavaScript', 'HTML', 'CSS'],
             'images' => [],
-            'description' => []
+            'description' => ['en' => 'horee shit', 'es' => 'hostia']
         ],
     "pub quiz" =>
         [
@@ -160,7 +163,7 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'subtitle' => ['en' => 'Quiz Game', 'es' => 'Juego de Quiz'],
             'technologies' => ['JavaScript', 'HTML', 'CSS'],
             'images' => [],
-            'description' => []
+            'description' => ['en' => 'u wot', 'es' => 'que lo que manito']
         ]
 ]
 );

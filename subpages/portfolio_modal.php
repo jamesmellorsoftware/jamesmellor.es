@@ -14,7 +14,7 @@
     </div>
 
     <div class="terminal-content terminal-portfolio_modal-content">
-        <div class="terminal-portfolio_modal-content-imagecontainer">
+        <div class="terminal-portfolio_modal-content-imagecontainer portfolio_modal_imagecontainer">
 
             <img src="img/portfolio/galleri/main.jpg" alt="Big image"
             class="terminal-portfolio_modal-content-imagecontainer-image

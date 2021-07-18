@@ -61,28 +61,78 @@ $(document).ready(function(){
                 let modal_topbar_title = modal.find(".terminal-topbar-text");
                 let modal_project_title = modal.find(".portfolio_modal_title");
                 let modal_project_subtitle = modal.find(".portfolio_modal_subtitle");
+                let modal_project_technologies = modal.find(".portfolio_modal_technologies");
                 let modal_project_description = modal.find(".portfolio_modal_description");
-                // let modal_project_images = modal.find(".portfolio_modal_images");
+                let modal_project_images = modal.find(".portfolio_modal_imagecontainer");
 
                 // ===== Clear modal data to avoid other projects interfering with new info ===== //
                 modal_topbar_title.html("");
                 modal_project_title.html("");
-                modal_project_subtitle.html("");
-                modal_project_description.html("");
-                // modal.images.html("");
+                modal_project_technologies.empty();
+                modal_project_description.remove();
+                modal_project_images.find(".portfolio_modal_image").remove();
+                modal_project_subtitle.remove();
 
                 // ===== Change modal data ===== //
-                // subtitle: after the title h1 element, add h3 elements for each language found
                 modal_project_title.html(project.title);
                 modal_topbar_title.html(project.title);
-                modal_project_description.html(project.description);
-                // modal_project_images.html(project.images);
-                // Object.entries(project.subtitle).forEach(function(subtitle){
-                //     const [key, value] = subtitle;
-                //     let new_subtitle =
-                // need to get a h3 template and replace its innerhtml and lang, then after() the title
-                // });
-                modal.find(".portfolio_modal_subtitle").html(project.subtitle.en);
+
+                let new_images = "";
+                Object.entries(project.images).forEach(function(image){
+                    const [index, filename] = image;
+                    new_images += "<img alt='"+project.title+"' class='";
+                    
+                    new_images += "portfolio_modal_image ";
+                    if (index == 0) {
+                        new_images += "terminal-portfolio_modal-content-imagecontainer-image--active ";
+                    }
+                    new_images += "terminal-portfolio_modal-content-imagecontainer-image' ";
+                    new_images += "src='img/portfolio/"+project.title+"/"+filename+"'";
+                    new_images += ">";
+                });
+                modal_project_images.append(new_images);
+
+                let new_subtitle = "";
+                Object.entries(project.subtitle).forEach(function(subtitle){
+                    const [lang, output] = subtitle;
+                    new_subtitle += "<h3 class='";
+                    new_subtitle += "terminal-portfolio_modal-content-subtitle ";
+                    new_subtitle += "portfolio_modal_subtitle' ";
+                    new_subtitle += "lang='"+lang+"'";
+                    new_subtitle += ">";
+                    new_subtitle += output;
+                    new_subtitle += "</h3>";
+                });
+                modal_project_title.after(new_subtitle);
+
+                let new_technology = "";
+                Object.entries(project.technologies).forEach(function(technology){
+                    const [index, output] = technology;
+                    new_technology += "<span class='";
+                    new_technology += "terminal-portfolio-content-row-text-technologies-technology'";
+                    new_technology += ">";
+                    new_technology += output;
+                    new_technology += "</span> ";
+                    
+                });
+                modal_project_technologies.append(new_technology);
+
+                let modal_project_technologies_1 = $(".portfolio_modal_technologies");
+                Object.entries(project.description).forEach(function(description){
+                    const [lang, output] = description;
+                    let new_description = "";
+                    new_description += "<p class='";
+                    new_description += "terminal-portfolio_modal-content-longdesc ";
+                    new_description += "portfolio_modal_description' ";
+                    new_description += "lang='"+lang+"'";
+                    new_description += ">";
+                    new_description += output;
+                    new_description += "</p>";
+                    modal_project_technologies_1.after(new_description);
+                });
+
+                // ===== Hide non-selected language items ===== //
+                hideLanguageElements();
 
                 // ===== Finally, show the portfolio modal ===== //
                 modal.fadeIn(100);
