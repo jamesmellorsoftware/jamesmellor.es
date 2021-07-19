@@ -57,14 +57,11 @@
                 justify-content: space-evenly;
 
                 &-subtitle {
+                    display: none;
                     font-weight: 400;
                     @media screen and (max-width: $mobile_width) { font-size: 1.1rem; }
                 }
 
-                &-technologies {
-                    @media screen and (max-width: $mobile_width) { display: none; }
-                }
-    
                 &-title {
                     font-weight: 400;
                     letter-spacing: 2px;

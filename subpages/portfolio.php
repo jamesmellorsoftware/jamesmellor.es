@@ -29,13 +29,6 @@
                             <?php echo $output; ?>
                         </h3>
                     <?php } ?>
-                    <div class="terminal-portfolio-content-row-text-technologies portfolio_row_technologies">
-                        <?php foreach($portfolio_row['technologies'] as $technology) { ?>
-                            <span class="terminal-portfolio-content-row-text-technologies-technology">
-                                <?php echo $technology; ?>
-                            </span>
-                        <?php } ?>
-                    </div>
                 </div>
             </div>
             <?php $i === 0 ? $i = 1 : $i = 0; ?>

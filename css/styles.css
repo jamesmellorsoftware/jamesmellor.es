@@ -596,18 +596,13 @@ p {
 }
 
 .terminal-portfolio-content-row-text-subtitle {
+  display: none;
   font-weight: 400;
 }
 
 @media screen and (max-width: 690px) {
   .terminal-portfolio-content-row-text-subtitle {
     font-size: 1.1rem;
-  }
-}
-
-@media screen and (max-width: 690px) {
-  .terminal-portfolio-content-row-text-technologies {
-    display: none;
   }
 }
 
