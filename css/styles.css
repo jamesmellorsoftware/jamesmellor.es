@@ -521,10 +521,16 @@ p {
   display: grid;
   grid-template-columns: 50% 1fr;
   grid-template-rows: repeat(2, 1fr);
+  transition: all 0.3s;
 }
 
 .terminal-portfolio-content-row:hover {
-  background-color: #6FFFE9;
+  background-color: #a2fff1;
+}
+
+.terminal-portfolio-content-row:active, .terminal-portfolio-content-row:focus {
+  background-color: #3cffe1;
+  transform: scale(0.9) translateY(3px);
 }
 
 .terminal-portfolio-content-row-image {
@@ -570,9 +576,12 @@ p {
 }
 
 .terminal-portfolio_modal-content-imagecontainer {
-  height: 100%;
+  max-height: 50vw;
+  min-height: 50vw;
+  max-width: 100%;
+  min-width: 100%;
   position: relative;
-  width: 100%;
+  text-align: center;
 }
 
 .terminal-portfolio_modal-content-imagecontainer-buttons {
@@ -589,6 +598,7 @@ p {
   cursor: pointer;
   font-size: 1rem;
   padding: 15px;
+  transition: all 0.3s;
 }
 
 .terminal-portfolio_modal-content-imagecontainer-buttons-button:hover {
@@ -596,9 +606,17 @@ p {
   color: #6FFFE9;
 }
 
+.terminal-portfolio_modal-content-imagecontainer-buttons-button:active, .terminal-portfolio_modal-content-imagecontainer-buttons-button:focus {
+  background-color: #010102;
+  transform: scale(0.9) translateY(3px);
+}
+
 .terminal-portfolio_modal-content-imagecontainer-image {
   display: none;
+  height: 100%;
   max-width: 100%;
+  object-fit: scale-down;
+  width: 100%;
 }
 
 .terminal-portfolio_modal-content-imagecontainer-image--active {

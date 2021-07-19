@@ -154,7 +154,7 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'title' => 'tipcalc',
             'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
             'technologies' => ['JavaScript', 'HTML', 'CSS'],
-            'images' => [],
+            'images' => ['main.jpg', 'desktop2.jpg'],
             'description' => ['en' => 'horee shit', 'es' => 'hostia']
         ],
     "pub quiz" =>
@@ -162,7 +162,10 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'title' => 'pub quiz',
             'subtitle' => ['en' => 'Quiz Game', 'es' => 'Juego de Quiz'],
             'technologies' => ['JavaScript', 'HTML', 'CSS'],
-            'images' => [],
+            'images' => [
+                'main.jpg', 'desktop2.jpg', 'difficulty1.jpg', 'endscreen1.jpg', 'quiz1.jpg',
+                'quiz2.jpg', 'quiz3.jpg'
+            ],
             'description' => ['en' => 'u wot', 'es' => 'que lo que manito']
         ]
 ]
