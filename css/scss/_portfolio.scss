@@ -15,19 +15,29 @@
         }
 
         &-row {
+
             &:hover {
                 background-color: lighten($primary-5, 10%);
+                transform: scale(1.05);
             }
+
             &:active,
             &:focus {
                 background-color: darken($primary-5, 10%);
                 transform: scale(0.9)  translateY(3px);
             }
+
             cursor: pointer;
             display: grid;
-            grid-template-columns: 50% 1fr;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1fr;
             transition: all 0.3s;
+            @media screen and (max-width: $mobile_width) {
+                grid-template-columns: 40% 60%;
+            }
+            @media screen and (min-width: $mobile_width) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             &-image {
                 grid-column: 1 / 2;
                 grid-row: 1 / -1;
@@ -45,20 +55,38 @@
                 grid-column: 2 / 3;
                 grid-row: 1 / -1;
                 justify-content: space-evenly;
-                &-title { text-transform: uppercase; }
+
+                &-subtitle {
+                    font-weight: 400;
+                    @media screen and (max-width: $mobile_width) { font-size: 1.1rem; }
+                }
+
+                &-technologies {
+                    @media screen and (max-width: $mobile_width) { display: none; }
+                }
+    
+                &-title {
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    @media screen and (max-width: $mobile_width) { font-size: 1.1rem; }
+                }
+
             }
         }
     }
 
     &_modal {
-        
+
         grid-column: 1 / -1;
         grid-row: 1 / -1;
 
         &-content {
+
             align-items: center;
             display: flex;
             flex-direction: column;
+            height: 100%;
 
             &-imagecontainer {
                 max-height: 50vw;
@@ -112,7 +140,15 @@
                 align-self: flex-start;
             }
 
-            &-title { text-transform: uppercase; }
+            &-subtitle {
+                font-weight: 400;
+            }
+
+            &-title {
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
         }
     }
 }

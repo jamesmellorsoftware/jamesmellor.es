@@ -542,18 +542,30 @@ p {
 .terminal-portfolio-content-row {
   cursor: pointer;
   display: grid;
-  grid-template-columns: 50% 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   transition: all 0.3s;
 }
 
 .terminal-portfolio-content-row:hover {
   background-color: #a2fff1;
+  transform: scale(1.05);
 }
 
 .terminal-portfolio-content-row:active, .terminal-portfolio-content-row:focus {
   background-color: #3cffe1;
   transform: scale(0.9) translateY(3px);
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-portfolio-content-row {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .terminal-portfolio-content-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .terminal-portfolio-content-row-image {
@@ -583,8 +595,32 @@ p {
   justify-content: space-evenly;
 }
 
+.terminal-portfolio-content-row-text-subtitle {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-portfolio-content-row-text-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-portfolio-content-row-text-technologies {
+    display: none;
+  }
+}
+
 .terminal-portfolio-content-row-text-title {
+  font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-portfolio-content-row-text-title {
+    font-size: 1.1rem;
+  }
 }
 
 .terminal-portfolio_modal {
@@ -596,6 +632,7 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .terminal-portfolio_modal-content-imagecontainer {
@@ -650,7 +687,13 @@ p {
   align-self: flex-start;
 }
 
+.terminal-portfolio_modal-content-subtitle {
+  font-weight: 400;
+}
+
 .terminal-portfolio_modal-content-title {
+  font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
