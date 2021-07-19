@@ -33,16 +33,16 @@
             portfolio_modal_image">
 
             <div class="terminal-portfolio_modal-content-imagecontainer-buttons">
-                <button class="terminal-portfolio_modal-content-imagecontainer-buttons-button
+                <span class="terminal-portfolio_modal-content-imagecontainer-buttons-button
                 terminal-portfolio_modal-content-imagecontainer-buttons-button_prev
                 portfolio_modal_image_button prev">
                     &lt;
-                </button>
-                <button class="terminal-portfolio_modal-content-imagecontainer-buttons-button
+                </span>
+                <span class="terminal-portfolio_modal-content-imagecontainer-buttons-button
                 terminal-portfolio_modal-content-imagecontainer-buttons-button_next
                 portfolio_modal_image_button next">
                     &gt;
-                </button>
+                </span>
             </div>
             
         </div>

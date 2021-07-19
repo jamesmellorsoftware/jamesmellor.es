@@ -147,7 +147,10 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
                 'main.jpg', 'addesk1.jpg', 'addesk2.jpg', 'admob1.jpg', 'admob2.jpg',
                 'homedesk1.jpg', 'homedesk2.jpg'
             ],
-            'description' => ['en' => 'yo we got a good desc here', 'es' => 'ay caramba']
+            'description' => [
+                'en' => 'yo we got a good desc here', 
+                'es' => 'ay caramba'
+            ]
         ],
     "tipcalc" =>
         [
