@@ -11,9 +11,9 @@
     }
     background-color: rgba(255, 255, 255, 0.98);
     display: none;
-    font-family: 'Lato', sans-serif;
+    font-family: $default_font, $default_font_fallback;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.8rem 1fr;
+    grid-template-rows: $topbar-height 1fr;
     overflow-y: hidden;
     z-index: 2;
 
@@ -22,13 +22,13 @@
         align-items: center;
         background-color: rgb(255, 255, 255);
         color: $grey;
-        cursor: default;
         display: flex;
-        font-family: 'Courier New', 'Courier New', Courier, monospace;
+        font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
         font-size: 1.2rem;
         font-weight: 800;
         grid-column: 1 / -1;
         grid-row: 1 / 2;
+        height: 100%;
         justify-content: space-between;
         letter-spacing: 2px;
 
@@ -72,10 +72,10 @@
 
     // ===== GENERAL CONTENT STYLES ===== //
     &-content {
-        max-height: 100%;
         grid-column: 1 / -1;
         grid-row: 2 / 3;
-        overflow-y: scroll;
+        height: 100%;
+        overflow-y: auto;
     }
 
     // ===== INDIVIDUAL WINDOWS ===== //

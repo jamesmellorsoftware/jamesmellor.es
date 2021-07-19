@@ -1,3 +1,10 @@
+// Fonts
+$default_font: 'Lato';
+$default_font_fallback: 'sans-serif';
+$monospace_font: 'Courier New';
+$monospace_font_fallback_1: 'Courier';
+$monospace_font_fallback_2: 'monospace';
+
 // Colour scheme
 // Lower number = darker colour
 $primary-1: #0B132B;
@@ -10,7 +17,7 @@ $danger-red: #dc3545;
 
 $grey: #6c757d;
 
-
 // Variables
 $mobile_width: 690px;
 $small_mobile_width: 550px;
+$topbar-height: 1.6rem;

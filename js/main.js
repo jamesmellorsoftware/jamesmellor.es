@@ -195,6 +195,7 @@ $(document).ready(function(){
         icon_clicked = icon_clicked.children(".navbar-icons-icon");
         section_to_open = ".terminal-" + icon_clicked.attr("id");
         $(section_to_open).fadeIn(100);
+        $(section_to_open).css("display", "grid");
         $(section_to_open).css("z-index", "2");
         $(".terminal").not(section_to_open).css("z-index", "1");
         restoreWindow($(section_to_open).find(".restore"));

@@ -1,4 +1,7 @@
 &-about {
+
+    height: 100%;
+
     &-content {
         @media screen and (min-width: $small_mobile_width) {
             display: grid;
@@ -7,9 +10,6 @@
         }
         @media screen and (max-width: $small_mobile_width) { display: block; }
         
-        padding-bottom: 20px;
-        padding-top: 20px;
-
         &-left {
             @media screen and (min-width: $small_mobile_width) {
                 grid-column: 1 / 2;
