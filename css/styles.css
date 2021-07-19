@@ -1,5 +1,6 @@
 body {
   background-color: #0B132B;
+  box-sizing: border-box;
   color: black;
   font-family: "Lato", "sans-serif";
   font-size: 16px;
@@ -299,9 +300,13 @@ p {
   height: 100%;
 }
 
+.terminal-about-content {
+  display: grid;
+  margin-top: 2px;
+}
+
 @media screen and (min-width: 550px) {
   .terminal-about-content {
-    display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr;
   }
@@ -309,11 +314,13 @@ p {
 
 @media screen and (max-width: 550px) {
   .terminal-about-content {
-    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
 .terminal-about-content-left {
+  height: 100%;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -322,19 +329,30 @@ p {
   .terminal-about-content-left {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    margin-bottom: 60px;
     overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-about-content-left {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
   }
 }
 
 .terminal-about-content-left-heading {
   margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 
 .terminal-about-content-left-paragraph {
   margin-bottom: 10px;
   text-align: center;
+}
+
+.terminal-about-content-left-paragraph:last-child {
+  margin-bottom: 20px;
 }
 
 .terminal-about-content-left-presenttech {
@@ -377,6 +395,7 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 @media screen and (min-width: 550px) {
@@ -384,13 +403,14 @@ p {
     border-left: 2px solid #6c757d;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    height: 90%;
     justify-content: space-around;
   }
 }
 
 @media screen and (max-width: 550px) {
   .terminal-about-content-right {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
     justify-content: flex-start;
   }
 }
@@ -503,8 +523,12 @@ p {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.terminal-portfolio {
+  height: 100%;
+}
+
 .terminal-portfolio-content {
-  padding-bottom: 80px;
+  height: 100%;
 }
 
 .terminal-portfolio-content-header {
