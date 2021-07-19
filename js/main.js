@@ -136,6 +136,7 @@ $(document).ready(function(){
 
                 // ===== Finally, show the portfolio modal ===== //
                 modal.fadeIn(100);
+                modal.css("display", "grid");
                 modal.css("z-index", "2");
                 $(".terminal").not("#portfolio_modal").css("z-index", "1");
             },
