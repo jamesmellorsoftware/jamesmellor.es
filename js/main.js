@@ -118,18 +118,22 @@ $(document).ready(function(){
                 modal_project_technologies.append(new_technology);
 
                 let modal_project_technologies_1 = $(".portfolio_modal_technologies");
+                let new_description = "<div class='terminal-portfolio_modal-content-longdesc' ";
                 Object.entries(project.description).forEach(function(description){
-                    const [lang, output] = description;
-                    let new_description = "";
-                    new_description += "<p class='";
-                    new_description += "terminal-portfolio_modal-content-longdesc ";
-                    new_description += "portfolio_modal_description' ";
-                    new_description += "lang='"+lang+"'";
-                    new_description += ">";
-                    new_description += output;
-                    new_description += "</p>";
-                    modal_project_technologies_1.after(new_description);
+                    const [lang, paragraphs] = description;
+                    Object.entries(paragraphs).forEach(function(paragraph){
+                        const [index, output] = paragraph;
+                        new_description += "<p class='";
+                        new_description += "terminal-portfolio_modal-content-longdesc-desc ";
+                        new_description += "portfolio_modal_description' ";
+                        new_description += "lang='"+lang+"'";
+                        new_description += ">";
+                        new_description += output;
+                        new_description += "</p>";
+                    });
                 });
+                new_description += "</div>";
+                modal_project_technologies_1.after(new_description);
 
                 // ===== Hide non-selected language items ===== //
                 hideLanguageElements();

@@ -624,19 +624,17 @@ p {
 }
 
 .terminal-portfolio_modal-content {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70% repeat(4, min-content);
   height: 100%;
+  text-align: center;
 }
 
 .terminal-portfolio_modal-content-imagecontainer {
-  max-height: 50vw;
-  min-height: 50vw;
-  max-width: 100%;
-  min-width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
   position: relative;
-  text-align: center;
 }
 
 .terminal-portfolio_modal-content-imagecontainer-buttons {
@@ -679,15 +677,25 @@ p {
 }
 
 .terminal-portfolio_modal-content-longdesc {
-  align-self: flex-start;
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
 }
 
 .terminal-portfolio_modal-content-subtitle {
   font-weight: 400;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+.terminal-portfolio_modal-content-technologies {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
 }
 
 .terminal-portfolio_modal-content-title {
   font-weight: 400;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

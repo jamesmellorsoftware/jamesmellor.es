@@ -148,8 +148,17 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
                 'homedesk1.jpg', 'homedesk2.jpg'
             ],
             'description' => [
-                'en' => 'yo we got a good desc here', 
-                'es' => 'ay caramba'
+                'en' => [
+                    'yo we got a good desc here',
+                    'this is paragraph 2',
+                    'and this is numba 3'
+                ],
+                'es' => [
+                    'uno dos tres cuatro',
+                    'marchando mi combo forma un alboroto',
+                    'uno dos tres cuatro',
+                    'marchando mis gatas forma un alboroto'
+                ],
             ]
         ],
     "tipcalc" =>
@@ -158,7 +167,19 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
             'technologies' => ['JavaScript', 'HTML', 'CSS'],
             'images' => ['main.jpg', 'desktop2.jpg'],
-            'description' => ['en' => 'horee shit', 'es' => 'hostia']
+            'description' => [
+                'en' => [
+                    'yo we got a good desc here',
+                    'this is paragraph 2',
+                    'and this is numba 3'
+                ],
+                'es' => [
+                    'uno dos tres cuatro',
+                    'marchando mi combo forma un alboroto',
+                    'uno dos tres cuatro',
+                    'marchando mis gatas forma un alboroto'
+                ],
+            ]
         ],
     "pub quiz" =>
         [
@@ -169,7 +190,19 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
                 'main.jpg', 'desktop2.jpg', 'difficulty1.jpg', 'endscreen1.jpg', 'quiz1.jpg',
                 'quiz2.jpg', 'quiz3.jpg'
             ],
-            'description' => ['en' => 'u wot', 'es' => 'que lo que manito']
+            'description' => [
+                'en' => [
+                    'yo we got a good desc here',
+                    'this is paragraph 2',
+                    'and this is numba 3'
+                ],
+                'es' => [
+                    'uno dos tres cuatro',
+                    'marchando mi combo forma un alboroto',
+                    'uno dos tres cuatro',
+                    'marchando mis gatas forma un alboroto'
+                ],
+            ]
         ]
 ]
 );
