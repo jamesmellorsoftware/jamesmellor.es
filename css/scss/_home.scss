@@ -6,6 +6,17 @@
 
     &-content {
         font-family: 'Courier New', Courier, monospace;
+
+        &-ascii {
+            text-align: center;
+        }
+
+        &-operations {
+            &-welcome {
+                color: rgb(255, 255, 255);
+                text-align: center;
+            }
+        }
     }
 
 }

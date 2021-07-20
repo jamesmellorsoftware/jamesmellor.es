@@ -523,6 +523,15 @@ p {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.terminal-home-content-ascii {
+  text-align: center;
+}
+
+.terminal-home-content-operations-welcome {
+  color: white;
+  text-align: center;
+}
+
 .terminal-portfolio {
   height: 100%;
 }
