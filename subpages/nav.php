@@ -25,8 +25,8 @@
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
         <?php } ?>
     </div>
-    <div class="navbar-icons nowindow">
-        <img class="navbar-icons-icon" id="light_dark_mode" src="img/brightness.png" alt="Light / Dark Mode">
+    <div class="navbar-icons nowindow theme">
+        <img class="navbar-icons-icon" id="theme" src="img/brightness.png" alt="Light / Dark Mode">
         <?php foreach (NAVBAR_LIGHTDARK as $lang => $output) { ?>
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
         <?php } ?>

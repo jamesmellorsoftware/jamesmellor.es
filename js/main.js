@@ -2,6 +2,9 @@ $(document).ready(function(){
 
     var lang_selector = 0;
     var languages = ["en", "es"];
+    var theme_selector = 0;
+    var themes = ["default", "light", "dark"];
+
     hideLanguageElements();
 
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
@@ -86,6 +89,10 @@ $(document).ready(function(){
 
     $(".language").on("click", function(){
         changeLanguage($(this));
+    });
+
+    $(".theme").on("click", function(){
+        changeTheme($(this));
     });
 
     $(".portfolio_row").on("click", function(){
@@ -245,6 +252,14 @@ $(document).ready(function(){
         language_button.attr("src", "img/" + next_language + ".png");
 
         hideLanguageElements();
+    }
+
+    function changeTheme(theme_button) {
+        theme_button = theme_button.children("#theme");
+        theme_selector = theme_selector + 1;
+        if (typeof themes[theme_selector] === "undefined") theme_selector = 0;
+        let next_theme = themes[theme_selector];
+        theme_button.attr("src", "img/theme" + next_theme + ".png");
     }
 
     function hideLanguageElements() {
