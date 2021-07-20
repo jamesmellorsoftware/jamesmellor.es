@@ -213,4 +213,9 @@ defined("SECTION_SETTINGS_TITLE") ? null : define("SECTION_SETTINGS_TITLE", ['en
 
 // Terminal window
 defined("SECTION_TERMINAL_TITLE") ? null : define("SECTION_TERMINAL_TITLE", ['en' => 'user@user: ~', 'es' => 'usuario@usuario: ~']);
+// defined("SECTION_TERMINAL_OPERATIONS_INTRO") ? null : define("SECTION_TERMINAL_OPERATIONS_INTRO",
+// [
+//     'en' => 'user@user: ~',
+//     'es' => 'usuario@usuario: ~'
+// ]);
 ?>

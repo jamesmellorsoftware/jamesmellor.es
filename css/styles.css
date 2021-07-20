@@ -520,11 +520,44 @@ p {
 }
 
 .terminal-home-content {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", "Courier", "monospace";
 }
 
 .terminal-home-content-ascii {
   text-align: center;
+}
+
+.terminal-home-content-input {
+  background-color: #050505;
+  border: none;
+  caret-color: #6FFFE9;
+  color: #6FFFE9;
+  font-family: "Courier New", "Courier", "monospace";
+  font-size: inherit;
+  outline: none;
+}
+
+.terminal-home-content-input:active, .terminal-home-content-input:focus {
+  border: none;
+  outline: none;
+}
+
+.terminal-home-content-operations-commands-command {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-rows: 1fr;
+  width: 100%;
+}
+
+.terminal-home-content-operations-commands-command-input {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.terminal-home-content-operations-commands-command-pre {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  width: 100%;
 }
 
 .terminal-home-content-operations-welcome {

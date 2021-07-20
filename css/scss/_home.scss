@@ -5,13 +5,46 @@
     display: grid;
 
     &-content {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
 
         &-ascii {
             text-align: center;
         }
 
+        &-input {
+            background-color: rgb(5,5,5);
+            border: none;
+            caret-color: $primary-5;
+            color: $primary-5;
+            font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
+            font-size: inherit;
+            outline: none;
+            &:active,
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+
         &-operations {
+            &-commands {
+                &-command {
+                    display: grid;
+                    grid-template-columns: max-content auto;
+                    grid-template-rows: 1fr;
+                    width: 100%;
+                    &-input {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / -1;
+                    }
+                    &-pre {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / -1;
+                        width: 100%;
+                    }
+                }
+                
+            }
             &-welcome {
                 color: rgb(255, 255, 255);
                 text-align: center;
