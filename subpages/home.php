@@ -78,7 +78,7 @@
                         [ user@User:
                     </span>
                     <input type="text" class="terminal-home-content-input
-                    terminal-home-content-operations-commands-input">
+                    terminal-home-content-operations-commands-input terminal-input">
                 </p>
             </div>
         </div>

@@ -6,6 +6,64 @@ $(document).ready(function(){
 
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
+    // enter on terminal input
+    $(".terminal-input").on('keypress', function(e){
+
+        if (e.which === 13) {
+
+            $(this).attr("disabled", "disabled");
+
+            let parent_container = $(".terminal-home-content-operations-commands");
+
+            let new_line = $(".terminal-home-content-operations-commands-command").last().clone();
+
+            let output = '';
+
+            let command = $(this).val();
+            // below switch will need to AJAX to server for variable in other languages
+            switch (command) {
+                case "commandlist":
+                case "command list":
+                case "help":
+                    // command list
+                    break;
+                case "cls":
+                case "clear":
+                case "clear all":
+                case "clear screen":
+                    // clear screen
+                    break;
+                case "close all":
+                    // close all open windows
+                    break;
+                case "open all":
+                    // open all windows
+                    // top -> bottom: about me > portfolio > contact > terminal
+                    break;
+                case "open":
+                case "close":
+                case "minimise":
+                case "minimize":
+                case "restore":
+                    output += '<p>Please specify which window to ' + command + ':</p>';
+                    output += '<p>about, contact, portfolio, terminal</p>';
+                    break;
+                default:
+                    output += '<p>Command "' + command + '" not recognised</p>';
+                    output += '<p>For help with commands, type: commandlist</p>';
+                    break;
+            }
+
+            parent_container.before(new_line);
+            parent_container.before(output);
+            
+            $(this).val("");
+            
+            $(this).removeAttr("disabled");
+            
+        }
+    });
+
     $(".navbar-icons").not(".nowindow").on("click", function(){
         openWindow($(this));
     });
