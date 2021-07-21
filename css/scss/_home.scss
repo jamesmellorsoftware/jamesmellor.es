@@ -5,7 +5,9 @@
     display: grid;
 
     &-content {
+
         font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
+        overflow-x: hidden;
 
         &-ascii {
             text-align: center;
@@ -26,8 +28,14 @@
             }
         }
 
+        &-intro {
+            color: $terminal-green;
+        }
+
         &-operations {
+
             &-commands {
+
                 &-command {
                     display: grid;
                     grid-template-columns: max-content auto;
@@ -43,8 +51,10 @@
                         width: 100%;
                     }
                 }
-                
             }
+
+            
+
             &-welcome {
                 color: rgb(255, 255, 255);
                 text-align: center;

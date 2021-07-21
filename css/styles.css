@@ -521,6 +521,7 @@ p {
 
 .terminal-home-content {
   font-family: "Courier New", "Courier", "monospace";
+  overflow-x: hidden;
 }
 
 .terminal-home-content-ascii {
@@ -540,6 +541,10 @@ p {
 .terminal-home-content-input:active, .terminal-home-content-input:focus {
   border: none;
   outline: none;
+}
+
+.terminal-home-content-intro {
+  color: #33FF33;
 }
 
 .terminal-home-content-operations-commands-command {
@@ -571,6 +576,7 @@ p {
 
 .terminal-portfolio-content {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .terminal-portfolio-content-header {

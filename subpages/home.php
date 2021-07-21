@@ -11,25 +11,24 @@
 
         <div class="terminal-home-content-space cls">&nbsp;</div>
 
-        <pre class="terminal-home-content-ascii cls">
-        // ===========================================//
-        // ===========================================//
+<pre class="terminal-home-content-ascii cls">
+// ===========================================//
+// ===========================================//
 
-        ░░█ ▄▀█ █▀▄▀█ █▀▀ █▀   █▀▄▀█ █▀▀ █░░ █░░ █▀█ █▀█
-        █▄█ █▀█ █░▀░█ ██▄ ▄█   █░▀░█ ██▄ █▄▄ █▄▄ █▄█ █▀▄
+░░█ ▄▀█ █▀▄▀█ █▀▀ █▀   █▀▄▀█ █▀▀ █░░ █░░ █▀█ █▀█
+█▄█ █▀█ █░▀░█ ██▄ ▄█   █░▀░█ ██▄ █▄▄ █▄▄ █▄█ █▀▄
 
-        || SOFTWARE DEVELOPER ||
+|| SOFTWARE DEVELOPER ||
 
-        // ===========================================//
-        // ===========================================//
-        </pre>
-
+// ===========================================//
+// ===========================================//
+</pre>
+        <div class="terminal-home-content-intro cls">
+            <?php foreach (SECTION_TERMINAL_OPERATIONS_INTRO as $output) { ?>
+                <p><?php echo $output; ?></p>
+            <?php } ?>
+        </div>
         <div class="terminal-home-content-operations">
-            <div class="terminal-home-content-operations-intro cls">
-                <?php foreach (SECTION_TERMINAL_OPERATIONS_INTRO as $output) { ?>
-                    <p class="terminal-text terminal-home-text"><?php echo $output; ?></p>
-                <?php } ?>
-            </div>
             <div class="terminal-home-content-operations-welcome cls">
                 <?php foreach (SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS as $lang => $outputs) { ?>
                     <?php foreach ($outputs as $output) { ?>
