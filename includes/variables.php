@@ -208,16 +208,92 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 );
 
 
-// Settings window
-defined("SECTION_SETTINGS_TITLE") ? null : define("SECTION_SETTINGS_TITLE", ['en' => PAGE_URL."/"."settings", 'es' => PAGE_URL."/"."configuración"]);
-
 // Terminal window
 defined("SECTION_TERMINAL_COMMAND_PRETEXT") ? null : define("SECTION_TERMINAL_COMMAND_PRETEXT",
 [
     'en' => 'user@User:',
     'es' => 'usuario@usuario:'
 ]);
-defined("SECTION_TERMINAL_TITLE") ? null : define("SECTION_TERMINAL_TITLE", ['en' => 'user@user: ~', 'es' => 'usuario@usuario: ~']);
+defined("SECTION_TERMINAL_COMMAND_RESPONSE") ? null : define("SECTION_TERMINAL_COMMAND_RESPONSE",
+[
+    'en' =>
+        [
+            'commandlist' =>
+                [
+                    'commandlist', 'open', 'open all',
+                    'close', 'close all', 'minimise',
+                    'restore', 'cls', 'clear screen'
+                ],
+            'open' => 
+                [
+                    'Please specify a window to open:',
+                    'open about | open projects | open contact'
+                ],
+            'close' => 
+                [
+                    'Please specify a window to close:',
+                    'close terminal | close about | close projects | close contact'
+                ],
+            'restore' => 
+                [
+                    'Please specify a window to restore:',
+                    'restore terminal | restore about | restore projects | restore contact'
+                ],
+            'minimise' => 
+                [
+                    'Please specify a window to minimise:',
+                    'minimise terminal | minimise about | minimise projects | minimise contact'
+                ],
+            'minimize' => 
+                [
+                    'Please specify a window to minimize:',
+                    'minimize terminal | minimize about | minimize projects | minimize contact'
+                ],
+            'invalid' => 
+                [
+                    'Command "',
+                    '" not recognised.',
+                    'For help with commands, type: commandlist'
+                ]
+        ],
+    'es' =>
+        [
+            'comandas' =>
+                [
+                    'comandas', 'abrir', 'abrir todo',
+                    'cerrar', 'cerrar todo', 'minimizar',
+                    'restaurar', 'cls'
+                ],
+            'abrir' => 
+                [
+                    'Por favor especifica una sección para abrir:',
+                    'abrir sobre mi | abrir proyectos | abrir contactar'
+                ],
+            'cerrar' => 
+                [
+                    'Por favor especifica una sección para cerrar:',
+                    'cerrar terminal | cerrar sobre mi | cerrar proyectos | cerrar contactar'
+                ],
+            'restaurar' => 
+                [
+                    'Por favor especifica una sección para restaurar:',
+                    'restaurar terminal | restaurar about | restaurar projects | restaurar contact'
+                ],
+            'minimizar' => 
+                [
+                    'Por favor especifica una sección para minimizar:',
+                    'minimizar terminal | minimizar about | minimizar projects | minimizar contact'
+                ],
+            'invalid' => 
+                [
+                    'Comanda "',
+                    '" no reconocido.',
+                    'Para ayuda con comandas, insribe: comandas'
+                ]
+        ]
+]);
+
+
 defined("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS") ? null : define("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS",
 [
     'en' => [
@@ -250,11 +326,7 @@ defined("SECTION_TERMINAL_OPERATIONS_INTRO") ? null : define("SECTION_TERMINAL_O
     '"jamesmellor.es/portfolio" loaded',
     'Loading: "jamesmellor.es/contact"...',
     '"jamesmellor.es/contact" loaded',
-    'Loading: "lights.js"...',
-    '"lights.js" loaded',
-    'Loading: "langselector.js"...',
-    '"langselector.js" loaded',
-    'langselector.js > setting language: "en" (English)',
     'Loading: "jamesmellor.es/introduction"...'
 ]);
+defined("SECTION_TERMINAL_TITLE") ? null : define("SECTION_TERMINAL_TITLE", ['en' => 'user@user: ~', 'es' => 'usuario@usuario: ~']);
 ?>

@@ -9,9 +9,9 @@
     </div>
     <div class="terminal-content terminal-home-content">
 
-        <div class="terminal-home-content-space">&nbsp;</div>
+        <div class="terminal-home-content-space cls">&nbsp;</div>
 
-        <pre class="terminal-home-content-ascii">
+        <pre class="terminal-home-content-ascii cls">
         // ===========================================//
         // ===========================================//
 
@@ -25,12 +25,12 @@
         </pre>
 
         <div class="terminal-home-content-operations">
-            <div class="terminal-home-content-operations-intro">
+            <div class="terminal-home-content-operations-intro cls">
                 <?php foreach (SECTION_TERMINAL_OPERATIONS_INTRO as $output) { ?>
                     <p class="terminal-text terminal-home-text"><?php echo $output; ?></p>
                 <?php } ?>
             </div>
-            <div class="terminal-home-content-operations-welcome">
+            <div class="terminal-home-content-operations-welcome cls">
                 <?php foreach (SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS as $lang => $outputs) { ?>
                     <?php foreach ($outputs as $output) { ?>
                         <p class="terminal-text terminal-home-text" lang="<?php echo $lang; ?>">
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="terminal-home-content-space">
+        <div class="terminal-home-content-space cls">
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>

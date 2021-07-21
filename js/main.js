@@ -9,6 +9,7 @@ $(document).ready(function(){
 
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
+
     // enter on terminal input
     $(".terminal-input").on('keypress', function(e){
 
@@ -19,45 +20,149 @@ $(document).ready(function(){
             let parent_container = $(".terminal-home-content-operations-commands");
 
             let new_line = $(".terminal-home-content-operations-commands-command").last().clone();
+            
+            new_line.addClass('cls');
 
-            let output = '';
+            let show_new_line = true;
+
+            let show_ajax_error = false;
+            let ajax_error_output = '<p class="cls">AJAX error!</p>';
+            ajax_error_output += '<p class="cls">Check your internet connection.</p>';
+
+            var output = '';
 
             let command = $(this).val();
-            // below switch will need to AJAX to server for variable in other languages
             switch (command) {
-                case "commandlist":
-                case "command list":
-                case "help":
-                    // command list
+                case "commandlist": case "command list": case "comandas":
+                case "help": case "ayuda":
+                    $.ajax({
+                        async: false,
+                        type: 'post',
+                        url: 'includes/terminal_command_retrieve.php',
+                        dataType: 'json',
+                        data: {
+                            "retrieve_command": true,
+                            "command": command,
+                            "lang": languages[lang_selector]
+                        },
+                        success: function(response) {
+                            output += '<p class="cls">';
+                            for (let i=0; i<response.length; i++) {
+                                output += response[i];
+                                output += ' ';
+                            }
+                            output += '</p>';
+                        },
+                        error: function(response) {
+                            show_ajax_error = terminalAjaxError(response);
+                        }
+                    });
                     break;
-                case "cls":
-                case "clear":
-                case "clear all":
-                case "clear screen":
-                    // clear screen
+                case "cls": case "clear": case "clear all": case "clear screen":
+                    $('.cls').remove();
+                    show_new_line = false;
                     break;
-                case "close all":
-                    // close all open windows
+                case "close all": case "cerrar todo":
+                    $('.terminal').each(function(){
+                        closeWindow($(this));
+                    })
                     break;
-                case "open all":
-                    // open all windows
-                    // top -> bottom: about me > portfolio > contact > terminal
+                case "open all": case "abrir todo":
+                    $('.terminal').not('#portfolio_modal').each(function(){
+                        openWindow($(this), true);
+                    })
                     break;
-                case "open":
-                case "close":
-                case "minimise":
-                case "minimize":
-                case "restore":
-                    output += '<p>Please specify which window to ' + command + ':</p>';
-                    output += '<p>about, contact, portfolio, terminal</p>';
+                case "open": case "close": case "minimise": case "minimize": case "restore":
+                case "abrir": case "cerrar": case "minimizar": case "restaurar":
+                    $.ajax({
+                        async: false,
+                        type: 'post',
+                        url: 'includes/terminal_command_retrieve.php',
+                        dataType: 'json',
+                        data: {
+                            "retrieve_command": true,
+                            "command": command,
+                            "lang": languages[lang_selector]
+                        },
+                        success: function(response){
+                            for (let i=0; i<response.length; i++) {
+                                output += '<p class="cls">' + response[i] + '</p>';
+                            }
+                        },
+                        error: function(response) {
+                            show_ajax_error = terminalAjaxError(response);
+                        }
+                    });
+                    break;
+                case "open about": case "abrir sobre mi":
+                    openWindow($('#nav-about'));
+                    break;
+                case "open contact": case "abrir contacto":
+                    openWindow($('#nav-contact'));
+                    break;
+                case "open projects": case "abrir proyectos":
+                    openWindow($('#nav-portfolio'));
+                    break;
+                case "close about": case "cerrar sobre mi":
+                    closeWindow($('.terminal-about'));
+                    break;
+                case "close contact": case "cerrar contacto":
+                    closeWindow($('.terminal-contact'));
+                    break;
+                case "close projects": case "cerrar proyectos":
+                    closeWindow($('.terminal-portfolio'));
+                    break;
+                case "close terminal": case "cerrar terminal":
+                    closeWindow($('.terminal-home'));
+                    break;
+                case "minimise about": case "minimize about": case "minimizar sobre mi":
+                    minimiseWindow($('.terminal-about').find('.minimise'));
+                    break;
+                case "minimise contact": case "minimize contact": case "minimizar contacto":
+                    minimiseWindow($('.terminal-contact').find('.minimise'));
+                    break;
+                case "minimise projects": case "minimize projects": case "minimizar proyectos":
+                    minimiseWindow($('.terminal-projects').find('.minimise'));
+                    break;
+                case "minimise terminal": case "minimize terminal": case "minimizar terminal":
+                    minimiseWindow($('.terminal-home').find('.minimise'));
+                    break;
+                case "restore about": case "restaurar sobre mi":
+                    restoreWindow($('.terminal-about').find('.restore'));
+                    break;
+                case "restore contact": case "restaurar contacto":
+                    restoreWindow($('.terminal-contact').find('.restore'));
+                    break;
+                case "restore projects": case "restaurar proyectos":
+                    restoreWindow($('.terminal-portfolio').find('.restore'));
+                    break;
+                case "restore terminal": case "restaurar terminal":
+                    restoreWindow($('.terminal-terminal').find('.restore'));
                     break;
                 default:
-                    output += '<p>Command "' + command + '" not recognised</p>';
-                    output += '<p>For help with commands, type: commandlist</p>';
+                    $.ajax({
+                        async: false,
+                        type: 'post',
+                        url: 'includes/terminal_command_retrieve.php',
+                        dataType: 'json',
+                        data: {
+                            "retrieve_command": true,
+                            "command": "invalid",
+                            "lang": languages[lang_selector]
+                        },
+                        success: function(response){
+                            output += '<p class="cls">' + response[0] + command + response[1] + "</p>";
+                            output += '<p class="cls">' + response[2] + "</p>";
+                        },
+                        error: function(response) {
+                            show_ajax_error = terminalAjaxError(response);
+                        }
+                    });
                     break;
             }
-
-            parent_container.before(new_line);
+            
+            if (show_ajax_error) output += ajax_error_output;
+            if (show_new_line) parent_container.before(new_line);
             parent_container.before(output);
             
             $(this).val("");
@@ -66,6 +171,7 @@ $(document).ready(function(){
             
         }
     });
+
 
     $(".navbar-icons").not(".nowindow").on("click", function(){
         openWindow($(this));
@@ -268,10 +374,14 @@ $(document).ready(function(){
         });
     }
 
-    function openWindow(icon_clicked) {
-        icon_clicked.addClass("navbar-icons-selected");
-        icon_clicked = icon_clicked.children(".navbar-icons-icon");
-        section_to_open = ".terminal-" + icon_clicked.attr("id");
+    function openWindow(icon_clicked, terminal_triggered = false) {
+        if (terminal_triggered) {
+            var section_to_open = icon_clicked;
+        } else {
+            icon_clicked.addClass("navbar-icons-selected");
+            icon_clicked = icon_clicked.children(".navbar-icons-icon");
+            var section_to_open = ".terminal-" + icon_clicked.attr("id");
+        }
         $(section_to_open).fadeIn(100);
         $(section_to_open).css("display", "grid");
         $(section_to_open).css("z-index", "2");
@@ -324,6 +434,13 @@ $(document).ready(function(){
 
         $(parent_section).css("z-index", "2");
         $(".terminal").not(parent_section).css("z-index", "1");
+    }
+
+
+    function terminalAjaxError(response) {
+        console.log('AJAX Error:');
+        console.log(response);
+        return true;
     }
 
 });
