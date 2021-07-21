@@ -212,10 +212,49 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 defined("SECTION_SETTINGS_TITLE") ? null : define("SECTION_SETTINGS_TITLE", ['en' => PAGE_URL."/"."settings", 'es' => PAGE_URL."/"."configuración"]);
 
 // Terminal window
+defined("SECTION_TERMINAL_COMMAND_PRETEXT") ? null : define("SECTION_TERMINAL_COMMAND_PRETEXT",
+[
+    'en' => 'user@User:',
+    'es' => 'usuario@usuario:'
+]);
 defined("SECTION_TERMINAL_TITLE") ? null : define("SECTION_TERMINAL_TITLE", ['en' => 'user@user: ~', 'es' => 'usuario@usuario: ~']);
-// defined("SECTION_TERMINAL_OPERATIONS_INTRO") ? null : define("SECTION_TERMINAL_OPERATIONS_INTRO",
-// [
-//     'en' => 'user@user: ~',
-//     'es' => 'usuario@usuario: ~'
-// ]);
+defined("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS") ? null : define("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS",
+[
+    'en' => [
+        'Welcome to jamesmellor.es!',
+        'First time visiting? Check the About section',
+        'After reading about me, check My Projects',
+        "If you'd like to speak to me, ask me a question, contact me!",
+        'Alternatively, you can use this terminal to navigate my website.',
+        'For a list of terminal commands, type: commandlist'
+    ],
+    'es' => [
+        '¡Bienvenid@s a jamesmellor.es!',
+        'Es tu primera vez aquí? Abre la sección Sobre Mi.',
+        'Después de leer esa información, comprueba Mis Proyectos.',
+        "Si quieres hablar conmigo o tienes dudas y preguntas, puedes contactarme.",
+        'Alternativamente, puedes usar este terminal para navegar mi sitio web.',
+        'Para acceder a la lista de comandas, inscribe: commandlist'
+    ]
+]);
+defined("SECTION_TERMINAL_OPERATIONS_INTRO") ? null : define("SECTION_TERMINAL_OPERATIONS_INTRO",
+[
+    '// ===== LOADING jamesmellor.es: ===== //',
+    'Loading: "background"...',
+    '"background" loaded',
+    'Loading: "jamesmellor.es/terminal"...',
+    '"jamesmellor.es/terminal" loaded',
+    'Loading: "jamesmellor.es/about"...',
+    '"jamesmellor.es/about" loaded',
+    'Loading: "jamesmellor.es/portfolio"...',
+    '"jamesmellor.es/portfolio" loaded',
+    'Loading: "jamesmellor.es/contact"...',
+    '"jamesmellor.es/contact" loaded',
+    'Loading: "lights.js"...',
+    '"lights.js" loaded',
+    'Loading: "langselector.js"...',
+    '"langselector.js" loaded',
+    'langselector.js > setting language: "en" (English)',
+    'Loading: "jamesmellor.es/introduction"...'
+]);
 ?>
