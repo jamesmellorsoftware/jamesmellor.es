@@ -139,6 +139,9 @@ $(document).ready(function(){
                 case "restore terminal": case "restaurar terminal":
                     restoreWindow($('.terminal-terminal').find('.restore'));
                     break;
+                // case "lang":
+                //     changeLanguage("#nav-lang");
+                //     break;
                 default:
                     $.ajax({
                         async: false,
