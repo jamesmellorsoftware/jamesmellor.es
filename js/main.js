@@ -26,8 +26,8 @@ $(document).ready(function(){
             let show_new_line = true;
 
             let show_ajax_error = false;
-            let ajax_error_output = '<p class="cls">AJAX error!</p>';
-            ajax_error_output += '<p class="cls">Check your internet connection.</p>';
+            let ajax_error_output = '<p class="cls terminal-home-content-operations-commands-command-error">AJAX error!</p>';
+            ajax_error_output += '<p class="cls terminal-home-content-operations-commands-command-error">Check your internet connection.</p>';
 
             var output = '';
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
                             "lang": languages[lang_selector]
                         },
                         success: function(response) {
-                            output += '<p class="cls">';
+                            output += '<p class="cls terminal-home-content-operations-commands-command-output">';
                             for (let i=0; i<response.length; i++) {
                                 output += response[i];
                                 output += ' ';
@@ -86,7 +86,7 @@ $(document).ready(function(){
                         },
                         success: function(response){
                             for (let i=0; i<response.length; i++) {
-                                output += '<p class="cls">' + response[i] + '</p>';
+                                output += '<p class="cls terminal-home-content-operations-commands-command-output">' + response[i] + '</p>';
                             }
                         },
                         error: function(response) {
@@ -139,9 +139,9 @@ $(document).ready(function(){
                 case "restore terminal": case "restaurar terminal":
                     restoreWindow($('.terminal-terminal').find('.restore'));
                     break;
-                // case "lang":
-                //     changeLanguage("#nav-lang");
-                //     break;
+                case "lang":
+                    changeLanguage("#nav-lang");
+                    break;
                 default:
                     $.ajax({
                         async: false,
@@ -154,8 +154,8 @@ $(document).ready(function(){
                             "lang": languages[lang_selector]
                         },
                         success: function(response){
-                            output += '<p class="cls">' + response[0] + command + response[1] + "</p>";
-                            output += '<p class="cls">' + response[2] + "</p>";
+                            output += '<p class="cls terminal-home-content-operations-commands-command-output">' + response[0] + command + response[1] + "</p>";
+                            output += '<p class="cls terminal-home-content-operations-commands-command-output">' + response[2] + "</p>";
                         },
                         error: function(response) {
                             show_ajax_error = terminalAjaxError(response);

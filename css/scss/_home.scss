@@ -41,9 +41,15 @@
                     grid-template-columns: max-content auto;
                     grid-template-rows: 1fr;
                     width: 100%;
+                    &-output {
+                        color: $danger-red;
+                    }
                     &-input {
                         grid-column: 1 / 2;
                         grid-row: 1 / -1;
+                    }
+                    &-output {
+                        color: $terminal-green;
                     }
                     &-pre {
                         grid-column: 2 / 3;

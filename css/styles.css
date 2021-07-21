@@ -554,9 +554,17 @@ p {
   width: 100%;
 }
 
+.terminal-home-content-operations-commands-command-output {
+  color: #dc3545;
+}
+
 .terminal-home-content-operations-commands-command-input {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
+}
+
+.terminal-home-content-operations-commands-command-output {
+  color: #33FF33;
 }
 
 .terminal-home-content-operations-commands-command-pre {
