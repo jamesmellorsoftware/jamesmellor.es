@@ -11,7 +11,22 @@
 
         <div class="terminal-home-content-space cls">&nbsp;</div>
 
-<pre class="terminal-home-content-ascii cls">
+<pre class="terminal-home-content-ascii terminal-home-content-ascii_mobile cls">
+// =====================//
+// =====================//
+
+░░█ ▄▀█ █▀▄▀█ █▀▀ █▀
+█▄█ █▀█ █░▀░█ ██▄ ▄█
+
+█▀▄▀█ █▀▀ █░░ █░░ █▀█ █▀█
+█░▀░█ ██▄ █▄▄ █▄▄ █▄█ █▀▄
+
+|| SOFTWARE DEVELOPER ||
+
+// =====================//
+// =====================//
+</pre>
+<pre class="terminal-home-content-ascii terminal-home-content-ascii_desktop cls">
 // ===========================================//
 // ===========================================//
 

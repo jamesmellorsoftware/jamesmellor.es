@@ -315,7 +315,7 @@ defined("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS") ? null : define("SECTION_TER
 ]);
 defined("SECTION_TERMINAL_OPERATIONS_INTRO") ? null : define("SECTION_TERMINAL_OPERATIONS_INTRO",
 [
-    '// ===== LOADING jamesmellor.es: ===== //',
+    '## LOADING jamesmellor.es ##',
     'Loading: "background"...',
     '"background" loaded',
     'Loading: "jamesmellor.es/terminal"...',

@@ -519,6 +519,12 @@ p {
   display: grid;
 }
 
+@media screen and (max-width: 690px) {
+  .terminal-home {
+    display: none;
+  }
+}
+
 .terminal-home-content {
   font-family: "Courier New", "Courier", "monospace";
   overflow-x: hidden;
@@ -526,6 +532,18 @@ p {
 
 .terminal-home-content-ascii {
   text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-home-content-ascii_desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .terminal-home-content-ascii_mobile {
+    display: none;
+  }
 }
 
 .terminal-home-content-input {

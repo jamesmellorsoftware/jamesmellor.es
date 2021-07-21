@@ -377,14 +377,10 @@ $(document).ready(function(){
         });
     }
 
-    function openWindow(icon_clicked, terminal_triggered = false) {
-        if (terminal_triggered) {
-            var section_to_open = icon_clicked;
-        } else {
-            icon_clicked.addClass("navbar-icons-selected");
-            icon_clicked = icon_clicked.children(".navbar-icons-icon");
-            var section_to_open = ".terminal-" + icon_clicked.attr("id");
-        }
+    function openWindow(icon_clicked) {
+        icon_clicked.addClass("navbar-icons-selected");
+        icon_clicked = icon_clicked.children(".navbar-icons-icon");
+        let section_to_open = ".terminal-" + icon_clicked.attr("id");
         $(section_to_open).fadeIn(100);
         $(section_to_open).css("display", "grid");
         $(section_to_open).css("z-index", "2");
