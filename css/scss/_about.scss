@@ -1,11 +1,9 @@
 &-about {
-
     height: 100%;
 
     &-content {
-        
         display: grid;
-        margin-top: 2px; // Fix scrollbar overrunning topbar
+        margin-top: 2px; // Fixes scrollbar overrunning topbar
 
         @media screen and (min-width: $small_mobile_width) {
             grid-template-columns: 70% 30%;
@@ -40,16 +38,19 @@
                 margin-bottom: 10px;
                 text-align: center;
             }
-            &-paragraph:last-child { margin-bottom: 20px; }
 
             &-presenttech {
+
                 margin-bottom: 10px;
+
                 &-skill {
-                    color: rgb(255,255,255);
+                    background-color: $primary-5;
+                    color: $white;
                     display: flex;
                     margin-bottom: 8px;
                     margin-top: 8px;
                     width: 100%;
+
                     &-amount {
                         background-color: lighten($primary-5, 15%);
                     }
@@ -68,10 +69,7 @@
                         text-align: right;
                         width: 60px;
                     }
-                    background-color: $primary-5;
-                    width: 100%;
                 }
-                
             }
         }
 

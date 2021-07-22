@@ -1,14 +1,15 @@
 // ===== NAVBAR & ICONS ===== //
 .navbar {
-    @media screen and (min-width: $mobile_width) { grid-row: 2 / 3; }
-    @media screen and (max-width: $mobile_width) { grid-row: 3 / 4; }
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: $mobile_width) { grid-row: 2 / 3; }
+    @media screen and (max-width: $mobile_width) { grid-row: 3 / 4; }
     @media screen and (min-width: $mobile_width) { justify-content: center; }
     @media screen and (max-width: $mobile_width) { justify-content: flex-start; }
-    width: 100%;
 
     &-left {
         @media screen and (min-width: $mobile_width) { grid-column: 1 / 2; }
@@ -26,20 +27,20 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        opacity: 20%;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        opacity: $navbar-icon-opacity;
+        padding-bottom: $navbar-icon-padding;
+        padding-top: $navbar-icon-padding;
         transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
         width: 100%;
 
         &-icon {
-            height: 40px;
+            height: $navbar-icon;
             transition: all 0.3s;
-            width: 40px;
+            width: $navbar-icon;
         }
 
         &-label {
-            color: rgb(255,255,255);
+            color: $white;
             margin-top: 5px;
             opacity: 0%;
             transform: translateY(-5px);
@@ -47,19 +48,19 @@
         }
 
         &-selected {
-            background-color: rgba(255,255,255,0.1);
+            background-color: $navbar-selected;
             opacity: 100%;
         }
 
         &:hover {
-            background-color: rgba(255,255,255,0.1);
+            background-color: $navbar-selected;
             opacity: 100%;
         }
 
         &:active,
         &:focus {
             background-color: $primary-1;
-            opacity: 60%;
+            opacity: $navbar-icon-opacity;
             transform: scale(0.9)  translateY(3px);
         }
 

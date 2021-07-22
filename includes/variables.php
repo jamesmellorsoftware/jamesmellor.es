@@ -1,4 +1,6 @@
 <?php
+
+// ===== PAGE ===== //
 defined("PAGE_URL") ? null : define("PAGE_URL", "jamesmellor.es");
 defined("PAGE_TITLE") ? null : define("PAGE_TITLE", "James Mellor - Software Developer");
 defined("ABOUT_TITLE") ? null : define("ABOUT_TITLE", "About Me");
@@ -45,7 +47,7 @@ defined("SECTION_NOWINDOWS") ? null : define("SECTION_NOWINDOWS",
 ]);
 
 
-// ===== ABOUT WINDOW ===== //
+// ===== ABOUT ===== //
 defined("SECTION_ABOUT_LEFT_HEADING") ? null : define("SECTION_ABOUT_LEFT_HEADING",
 [
     'en' => 'Hello.',
@@ -127,15 +129,19 @@ defined("SECTION_ABOUT_TITLE") ? null : define("SECTION_ABOUT_TITLE",
 ]);
 
 
-// Contact window
+// ===== CONTACT ===== //
 defined("SECTION_CONTACT_TITLE") ? null : define("SECTION_CONTACT_TITLE", ['en' => PAGE_URL."/"."contact", 'es' => PAGE_URL."/"."contacto"]);
-defined("SECTION_CONTACT_EMAIL") ? null : define("SECTION_CONTACT_EMAIL", "mellor29j@gmail.com");
+defined("SECTION_CONTACT_EMAIL") ? null : define("SECTION_CONTACT_EMAIL", "james@jamesmellor.es");
 defined("SECTION_CONTACT_LINKEDIN") ? null : define("SECTION_CONTACT_LINKEDIN", "mellor29j");
 defined("SECTION_CONTACT_LINKEDIN_URL") ? null : define("SECTION_CONTACT_LINKEDIN_URL", "https://www.linkedin.com/in/".SECTION_CONTACT_LINKEDIN);
 
 
-// Portfolio window
-defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE", ['en' => PAGE_URL."/"."my-work", 'es' => PAGE_URL."/"."mis-proyectos"]);
+// ===== PORTFOLIO ===== //
+defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE",
+[
+    'en' => PAGE_URL."/"."my-work",
+    'es' => PAGE_URL."/"."mis-proyectos"
+]);
 defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 [
     "galleri" =>
@@ -208,7 +214,7 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 );
 
 
-// Terminal window
+// ===== TERMINAL ===== //
 defined("SECTION_TERMINAL_COMMAND_PRETEXT") ? null : define("SECTION_TERMINAL_COMMAND_PRETEXT",
 [
     'en' => 'user@User:',
@@ -292,8 +298,6 @@ defined("SECTION_TERMINAL_COMMAND_RESPONSE") ? null : define("SECTION_TERMINAL_C
                 ]
         ]
 ]);
-
-
 defined("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS") ? null : define("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS",
 [
     'en' => [

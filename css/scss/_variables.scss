@@ -1,24 +1,39 @@
-// Fonts
-$default_font: 'Lato';
-$default_font_fallback: 'sans-serif';
-$monospace_font: 'Courier New';
-$monospace_font_fallback_1: 'Courier';
-$monospace_font_fallback_2: 'monospace';
+// About
 
-// Colour scheme
-// Lower number = darker colour
+// Colours
+$black: rgb(0,0,0);
+$black80: rgba(0,0,0,0.8);
+$black95: rgba(0,0,0,0.95);
+$danger-red: #dc3545;
+$grey: #6c757d;
 $primary-1: #0B132B;
 $primary-2: #1C2541;
 $primary-3: #3A506B;
 $primary-4: #5BC0BE;
 $primary-5: #6FFFE9;
-
-$danger-red: #dc3545;
 $terminal-green: #33FF33;
+$white: rgb(255,255,255);
 
-$grey: #6c757d;
+// Fonts
+$default_font: 'Lato';
+$default_font_fallback: 'sans-serif';
+$default_font_size: '16px';
+$monospace_font: 'Courier New';
+$monospace_font_fallback_1: 'Courier';
+$monospace_font_fallback_2: 'monospace';
 
-// Variables
+// Navbar
+$navbar-icon: 40px;
+$navbar-icon-opacity: 20%;
+$navbar-icon-padding: 10px;
+$navbar-selected: rgba(255,255,255,0.1);
+
+// Terminal
+$input-background: rgb(5,5,5);
+
+// Topbar
+$topbar-height: 1.6rem;
+
+// Widths
 $mobile_width: 690px;
 $small_mobile_width: 550px;
-$topbar-height: 1.6rem;

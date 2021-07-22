@@ -29,7 +29,7 @@
                 grid-template-rows: 5vh 1fr minmax(min-content, 1fr) 5vh;
             }
 
-            background-color: rgba(0,0,0,0.8);
+            background-color: $black80;
             display: grid;
             left: 0;
             margin: 0;

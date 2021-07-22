@@ -1,4 +1,5 @@
 <section href="home" class="terminal terminal-home">
+
     <div class="terminal-topbar terminal-home-topbar">
         <?php foreach (SECTION_TERMINAL_TITLE as $lang => $output) { ?>
             <span class="terminal-topbar-text terminal-home-topbar-text" lang="<?php echo $lang; ?>">
@@ -7,6 +8,7 @@
         <?php } ?>
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
+
     <div class="terminal-content terminal-home-content fade_element">
 
         <div class="terminal-home-content-space cls">&nbsp;</div>
@@ -26,6 +28,7 @@
 // =====================//
 // =====================//
 </pre>
+
 <pre class="terminal-home-content-ascii terminal-home-content-ascii_desktop cls">
 // ===========================================//
 // ===========================================//
@@ -38,11 +41,13 @@
 // ===========================================//
 // ===========================================//
 </pre>
+
         <div class="terminal-home-content-intro cls">
             <?php foreach (SECTION_TERMINAL_OPERATIONS_INTRO as $output) { ?>
                 <p><?php echo $output; ?></p>
             <?php } ?>
         </div>
+        
         <div class="terminal-home-content-operations">
             <div class="terminal-home-content-operations-welcome cls">
                 <?php foreach (SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS as $lang => $outputs) { ?>

@@ -1,3 +1,1 @@
-<section class="minimise_bar">
-
-</section>
+<section class="minimise_bar"></section>

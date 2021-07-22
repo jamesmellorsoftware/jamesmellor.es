@@ -1,33 +1,30 @@
 &-home {
-    background-color: rgba(0,0,0,0.95);
-    border: 1px solid rgb(255, 255, 255);
+    background-color: $black95;
+    border: 1px solid $white;
     color: $primary-5;
     @media screen and (min-width: $mobile_width) { display: grid; }
     @media screen and (max-width: $mobile_width) { display: none; }
 
     &-content {
-
         font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
         overflow-x: hidden;
 
         &-ascii {
             text-align: center;
-            &_desktop {
-                @media screen and (max-width: $mobile_width) { display: none; }
-            }
-            &_mobile {
-                @media screen and (min-width: $mobile_width) { display: none; }
-            }
+
+            &_desktop { @media screen and (max-width: $mobile_width) { display: none; } }
+            &_mobile  { @media screen and (min-width: $mobile_width) { display: none; } }
         }
 
         &-input {
-            background-color: rgb(5,5,5);
+            background-color: $input-background;
             border: none;
             caret-color: $primary-5;
             color: $primary-5;
             font-family: $monospace_font, $monospace_font_fallback_1, $monospace_font_fallback_2;
             font-size: inherit;
             outline: none;
+
             &:active,
             &:focus {
                 border: none;
@@ -35,29 +32,23 @@
             }
         }
 
-        &-intro {
-            color: $terminal-green;
-        }
+        &-intro { color: $terminal-green; }
 
         &-operations {
-
             &-commands {
-
                 &-command {
                     display: grid;
                     grid-template-columns: max-content auto;
                     grid-template-rows: 1fr;
                     width: 100%;
-                    &-output {
-                        color: $danger-red;
-                    }
+
                     &-input {
                         grid-column: 1 / 2;
                         grid-row: 1 / -1;
                     }
-                    &-output {
-                        color: $terminal-green;
-                    }
+
+                    &-output { color: $terminal-green; }
+
                     &-pre {
                         grid-column: 2 / 3;
                         grid-row: 1 / -1;
@@ -66,13 +57,10 @@
                 }
             }
 
-            
-
             &-welcome {
-                color: rgb(255, 255, 255);
+                color: $white;
                 text-align: center;
             }
         }
     }
-
 }

@@ -33,29 +33,24 @@
                 &:hover {
                     transform: scale(1.2);
                 }
-
                 &:hover + &-label {
                     opacity: 100%;
                     transform: translateY(10px);
                     z-index: 3;
                 }
-
                 &:active {
                     opacity: 60%;
                     transform: scale(0.9);
                 }
-
                 &:active + &-label {
                     opacity: 60%;
                     transform: scale(0.9);
                 }
-
                 &-label {
                     opacity: 0%;
                     transform: translateY(-10px);
                     transition: transform 0.3s, opacity 0.3s;
                 }
-
             }
         }
     }

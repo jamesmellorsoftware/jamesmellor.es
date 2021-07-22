@@ -1,5 +1,12 @@
 // ===== NO WINDOWS OPEN DISPLAY ===== //
 .no_windows {
+    align-items: center;
+    color: $grey;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @media screen and (min-width: $mobile_width) {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
@@ -8,11 +15,10 @@
         grid-column: 2 / 4;
         grid-row: 2 / 3;
     }
-    align-items: center;
-    color: $grey;
-    cursor: default;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &-ascii { text-align: center; }
+    
+    &-ascii {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
 }
