@@ -1,9 +1,9 @@
 &-home {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.95);
     border: 1px solid rgb(255, 255, 255);
     color: $primary-5;
-    display: none;
-    // @media screen and (max-width: $mobile_width) { display: none; }
+    @media screen and (min-width: $mobile_width) { display: grid; }
+    @media screen and (max-width: $mobile_width) { display: none; }
 
     &-content {
 

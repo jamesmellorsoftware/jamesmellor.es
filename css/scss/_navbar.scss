@@ -6,8 +6,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    @media screen and (min-width: $mobile_width) { //justify-content: center; }
+    @media screen and (min-width: $mobile_width) { justify-content: center; }
     @media screen and (max-width: $mobile_width) { justify-content: flex-start; }
     width: 100%;
 

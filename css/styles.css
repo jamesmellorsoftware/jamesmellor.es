@@ -101,7 +101,6 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
 }
 
@@ -529,10 +528,21 @@ p {
 }
 
 .terminal-home {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   border: 1px solid white;
   color: #6FFFE9;
-  display: none;
+}
+
+@media screen and (min-width: 690px) {
+  .terminal-home {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .terminal-home {
+    display: none;
+  }
 }
 
 .terminal-home-content {
