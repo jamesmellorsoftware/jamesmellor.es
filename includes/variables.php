@@ -149,15 +149,15 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             ],
             'description' => [
                 'en' => [
-                    'yo we got a good desc here',
-                    'this is paragraph 2',
-                    'and this is numba 3'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon'
                 ],
                 'es' => [
-                    'uno dos tres cuatro',
-                    'marchando mi combo forma un alboroto',
-                    'uno dos tres cuatro',
-                    'marchando mis gatas forma un alboroto'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon'
                 ],
             ]
         ],
@@ -169,15 +169,15 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'images' => ['main.jpg', 'desktop2.jpg'],
             'description' => [
                 'en' => [
-                    'yo we got a good desc here',
-                    'this is paragraph 2',
-                    'and this is numba 3'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon'
                 ],
                 'es' => [
-                    'uno dos tres cuatro',
-                    'marchando mi combo forma un alboroto',
-                    'uno dos tres cuatro',
-                    'marchando mis gatas forma un alboroto'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon'
                 ],
             ]
         ],
@@ -192,15 +192,15 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             ],
             'description' => [
                 'en' => [
-                    'yo we got a good desc here',
-                    'this is paragraph 2',
-                    'and this is numba 3'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon'
                 ],
                 'es' => [
-                    'uno dos tres cuatro',
-                    'marchando mi combo forma un alboroto',
-                    'uno dos tres cuatro',
-                    'marchando mis gatas forma un alboroto'
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming soon',
+                    'information coming sooninformation coming soon'
                 ],
             ]
         ]

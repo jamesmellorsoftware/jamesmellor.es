@@ -516,13 +516,7 @@ p {
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid white;
   color: #6FFFE9;
-  display: grid;
-}
-
-@media screen and (max-width: 690px) {
-  .terminal-home {
-    display: none;
-  }
+  display: none;
 }
 
 .terminal-home-content {

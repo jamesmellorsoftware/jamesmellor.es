@@ -1,5 +1,5 @@
 <nav class="navbar navbar-left">
-    <div id="nav-home" class="navbar-icons navbar-icons-selected">
+    <div id="nav-home" class="navbar-icons">
         <img class="navbar-icons-icon" id="home" src="img/command-window.png" alt="Home">
         <?php foreach (NAVBAR_TERMINAL as $lang => $output) { ?>
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
@@ -25,12 +25,12 @@
             <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
         <?php } ?>
     </div>
-    <div class="navbar-icons nowindow theme" style="display:none">
+    <!-- <div class="navbar-icons nowindow theme" style="display:none">
         <img class="navbar-icons-icon" id="theme" src="img/brightness.png" alt="Light / Dark Mode">
-        <?php foreach (NAVBAR_LIGHTDARK as $lang => $output) { ?>
-            <span class="navbar-icons-label" lang="<?php echo $lang; ?>"><?php echo $output; ?></span>
-        <?php } ?>
-    </div>
+        <?php // foreach (NAVBAR_LIGHTDARK as $lang => $output) { ?>
+            <span class="navbar-icons-label" lang="<?php // echo $lang; ?>"><?php // echo $output; ?></span>
+        <?php // } ?>
+    </div> -->
     <div id="nav-lang" class="navbar-icons nowindow language">
         <img class="navbar-icons-icon" id="language" src="img/en.png" alt="Language">
         <?php foreach (NAVBAR_LANGUAGE as $lang => $output) { ?>

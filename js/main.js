@@ -7,6 +7,8 @@ $(document).ready(function(){
 
     hideLanguageElements();
 
+    if ($('.terminal-home').css('display') != 'none') $('#nav-home').addClass('navbar-icons-selected');
+
     const section = { grid_column: "2 / 3", grid_row: "2 / 3" }
 
 
