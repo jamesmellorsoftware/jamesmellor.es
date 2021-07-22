@@ -8,7 +8,7 @@
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
 
-    <div class="terminal-content terminal-portfolio-content">
+    <div class="terminal-content terminal-portfolio-content fade_element">
         
         <?php $i = 0; ?>
         <?php foreach (SECTION_PORTFOLIO_ROWS as $portfolio_row) : ?>

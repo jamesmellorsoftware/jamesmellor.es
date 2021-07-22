@@ -7,7 +7,7 @@
         <?php } ?>
         <?php require("includes/terminal_topbar.php"); ?>
     </div>
-    <div class="terminal-content terminal-home-content">
+    <div class="terminal-content terminal-home-content fade_element">
 
         <div class="terminal-home-content-space cls">&nbsp;</div>
 

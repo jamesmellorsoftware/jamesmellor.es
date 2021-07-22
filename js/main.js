@@ -319,6 +319,7 @@ $(document).ready(function(){
                 modal.css("display", "grid");
                 modal.css("z-index", "2");
                 $(".terminal").not("#portfolio_modal").css("z-index", "1");
+                playWindowAnimations(modal);
             },
             error: function(response) {
                 console.log('AJAX Error:');
@@ -388,6 +389,7 @@ $(document).ready(function(){
         $(section_to_open).css("z-index", "2");
         $(".terminal").not(section_to_open).css("z-index", "1");
         restoreWindow($(section_to_open).find(".restore"));
+        playWindowAnimations($(section_to_open));
     }
     
     function closeWindow(button_clicked) {
@@ -442,6 +444,13 @@ $(document).ready(function(){
         console.log('AJAX Error:');
         console.log(response);
         return true;
+    }
+
+
+    function playWindowAnimations(section_to_open) {
+        let fade_elements = section_to_open.find('.fade_element');
+        fade_elements.css('display', 'none');
+        fade_elements.each(function(){ $(this).fadeIn(1000); });
     }
 
 });

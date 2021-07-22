@@ -10,7 +10,7 @@
 
     <div class="terminal-content terminal-about-content">
 
-        <div class="terminal-about-content-left">
+        <div class="terminal-about-content-left fade_element">
             <?php foreach (SECTION_ABOUT_LEFT_HEADING as $lang => $output) { ?>
                 <h1 class="terminal-about-content-left-heading" lang="<?php echo $lang; ?>">
                     <?php echo $output; ?>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="terminal-about-content-right">
+        <div class="terminal-about-content-right fade_element">
             <div class="terminal-about-content-right-location">
                 <img class="terminal-about-content-right-location-img" src="img/passport.png" alt="Passport">
                 <?php foreach (SECTION_ABOUT_RIGHT_FROM as $lang => $output) { ?>

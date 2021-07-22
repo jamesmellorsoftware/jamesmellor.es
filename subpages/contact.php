@@ -10,14 +10,14 @@
 
     <div class="terminal-content terminal-contact-content">
         <div class="terminal-contact-content-icons">
-            <div class="terminal-contact-content-icons-email">
+            <div class="terminal-contact-content-icons-email fade_element">
                 <img src="img/email.png" alt="Email" href="<?php echo SECTION_CONTACT_EMAIL; ?>"
                 class="terminal-contact-content-icons-icon">
                 <span class="terminal-contact-content-icons-icon-label">
                     <?php echo SECTION_CONTACT_EMAIL; ?>
                 </span>
             </div>
-            <div class="terminal-contact-content-icons-linkedin">
+            <div class="terminal-contact-content-icons-linkedin fade_element">
                 <img src="img/linkedin.png" alt="Email" href="<?php echo SECTION_CONTACT_LINKEDIN_URL; ?>"
                 class="terminal-contact-content-icons-icon">
                 <span class="terminal-contact-content-icons-icon-label">
