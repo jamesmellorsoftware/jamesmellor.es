@@ -18,7 +18,7 @@
         <div class="terminal-contact-content-icons">
 
             <div class="terminal-contact-content-icons-email fade_element">
-                <img src="img/email.png" href="<?php echo SECTION_CONTACT_EMAIL; ?>"
+                <img src="img/email.png" href="mailto:<?php echo SECTION_CONTACT_EMAIL; ?>"
                 class="terminal-contact-content-icons-icon" alt="Email">
                 <span class="terminal-contact-content-icons-icon-label">
                     <?php echo SECTION_CONTACT_EMAIL; ?>
