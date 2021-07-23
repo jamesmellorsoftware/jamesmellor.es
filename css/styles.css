@@ -177,9 +177,11 @@ p {
   opacity: 100%;
 }
 
-.navbar-icons:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  opacity: 100%;
+@media screen and (min-width: 550px) {
+  .navbar-icons:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 100%;
+  }
 }
 
 .navbar-icons:active, .navbar-icons:focus {
@@ -188,13 +190,17 @@ p {
   transform: scale(0.9) translateY(3px);
 }
 
-.navbar-icons:hover > .navbar-icons-icon {
-  transform: scale(1.2);
+@media screen and (min-width: 550px) {
+  .navbar-icons:hover > .navbar-icons-icon {
+    transform: scale(1.2);
+  }
 }
 
-.navbar-icons:hover > .navbar-icons-label {
-  opacity: 100%;
-  transform: translateY(5px);
+@media screen and (min-width: 550px) {
+  .navbar-icons:hover > .navbar-icons-label {
+    opacity: 100%;
+    transform: translateY(5px);
+  }
 }
 
 .no_windows {
@@ -283,9 +289,11 @@ p {
   transition: transform 0.1s;
 }
 
-.terminal-topbar-controls-control:hover {
-  background-color: #0B132B;
-  color: #6FFFE9;
+@media screen and (min-width: 550px) {
+  .terminal-topbar-controls-control:hover {
+    background-color: #0B132B;
+    color: #6FFFE9;
+  }
 }
 
 .terminal-topbar-controls-control:active, .terminal-topbar-controls-control:focus {
@@ -490,14 +498,18 @@ p {
   width: 100px;
 }
 
-.terminal-contact-content-icons-icon:hover {
-  transform: scale(1.2);
+@media screen and (min-width: 550px) {
+  .terminal-contact-content-icons-icon:hover {
+    transform: scale(1.2);
+  }
 }
 
-.terminal-contact-content-icons-icon:hover + .terminal-contact-content-icons-icon-label {
-  opacity: 100%;
-  transform: translateY(10px);
-  z-index: 3;
+@media screen and (min-width: 550px) {
+  .terminal-contact-content-icons-icon:hover + .terminal-contact-content-icons-icon-label {
+    opacity: 100%;
+    transform: translateY(10px);
+    z-index: 3;
+  }
 }
 
 .terminal-contact-content-icons-icon:active {
@@ -625,9 +637,11 @@ p {
   transition: all 0.3s;
 }
 
-.terminal-portfolio-content-row:hover {
-  background-color: #a2fff1;
-  transform: scale(1.05);
+@media screen and (min-width: 550px) {
+  .terminal-portfolio-content-row:hover {
+    background-color: #a2fff1;
+    transform: scale(1.05);
+  }
 }
 
 .terminal-portfolio-content-row:active, .terminal-portfolio-content-row:focus {
@@ -733,9 +747,11 @@ p {
   transition: all 0.3s;
 }
 
-.terminal-portfolio_modal-content-imagecontainer-buttons-button:hover {
-  background-color: #0B132B;
-  color: #6FFFE9;
+@media screen and (min-width: 550px) {
+  .terminal-portfolio_modal-content-imagecontainer-buttons-button:hover {
+    background-color: #0B132B;
+    color: #6FFFE9;
+  }
 }
 
 .terminal-portfolio_modal-content-imagecontainer-buttons-button:active, .terminal-portfolio_modal-content-imagecontainer-buttons-button:focus {
@@ -795,7 +811,9 @@ p {
   background-color: #dc3545;
 }
 
-.close:hover {
-  background-color: #66121a !important;
+@media screen and (min-width: 550px) {
+  .close:hover {
+    background-color: #66121a !important;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

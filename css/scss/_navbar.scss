@@ -53,8 +53,10 @@
         }
 
         &:hover {
-            background-color: $navbar-selected;
-            opacity: 100%;
+            @media screen and (min-width: $small_mobile_width) {
+                background-color: $navbar-selected;
+                opacity: 100%;
+            }
         }
 
         &:active,
@@ -65,12 +67,14 @@
         }
 
         &:hover > &-icon {
-            transform: scale(1.2);
+            @media screen and (min-width: $small_mobile_width) { transform: scale(1.2); }
         }
 
         &:hover > &-label {
-            opacity: 100%;
-            transform: translateY(5px);
+            @media screen and (min-width: $small_mobile_width) {
+                opacity: 100%;
+                transform: translateY(5px);
+            }
         }
     }
 }

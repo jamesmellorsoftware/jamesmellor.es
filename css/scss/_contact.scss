@@ -31,12 +31,14 @@
                 width: 100px;
 
                 &:hover {
-                    transform: scale(1.2);
+                    @media screen and (min-width: $small_mobile_width) { transform: scale(1.2); }
                 }
                 &:hover + &-label {
-                    opacity: 100%;
-                    transform: translateY(10px);
-                    z-index: 3;
+                    @media screen and (min-width: $small_mobile_width) {
+                        opacity: 100%;
+                        transform: translateY(10px);
+                        z-index: 3;
+                    }
                 }
                 &:active {
                     opacity: 60%;

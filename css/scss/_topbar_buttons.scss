@@ -7,5 +7,9 @@
 }
 .close {
     background-color: $danger-red;
-    &:hover { background-color: darken($danger-red, 30%) !important; }
+    &:hover {
+        @media screen and (min-width: $small_mobile_width) {
+            background-color: darken($danger-red, 30%) !important;
+        }
+    }
 }

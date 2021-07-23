@@ -50,8 +50,10 @@
                 transition: transform 0.1s;
 
                 &:hover {
-                    background-color: $primary-1;
-                    color: $primary-5;
+                    @media screen and (min-width: $small_mobile_width) {
+                        background-color: $primary-1;
+                        color: $primary-5;
+                    }
                 }
                 &:active,
                 &:focus {

@@ -21,8 +21,10 @@
             transition: all 0.3s;
 
             &:hover {
-                background-color: lighten($primary-5, 10%);
-                transform: scale(1.05);
+                @media screen and (min-width: $small_mobile_width) {
+                    background-color: lighten($primary-5, 10%);
+                    transform: scale(1.05);
+                }
             }
             &:active,
             &:focus {
