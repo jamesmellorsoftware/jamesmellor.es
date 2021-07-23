@@ -59,22 +59,17 @@ $(document).ready(function(){
                 // Get modal and its properties in variables so we can manipulate them
                 let modal = $("#portfolio_modal");
                 let modal_topbar_title = modal.find(".terminal-topbar-text");
-                let modal_project_title = modal.find(".portfolio_modal_title");
-                let modal_project_subtitle = modal.find(".portfolio_modal_subtitle");
                 let modal_project_technologies = modal.find(".portfolio_modal_technologies");
                 let modal_project_description = modal.find(".portfolio_modal_description");
                 let modal_project_images = modal.find(".portfolio_modal_imagecontainer");
 
                 // Clear modal data to avoid other projects interfering with new info
                 modal_topbar_title.html("");
-                modal_project_title.html("");
                 modal_project_technologies.empty();
                 modal_project_description.remove();
                 modal_project_images.find(".portfolio_modal_image").remove();
-                modal_project_subtitle.remove();
 
                 // ===== Change modal data
-                modal_project_title.html(project.title);
                 modal_topbar_title.html(project.title);
 
                 let new_images = "";
@@ -92,19 +87,6 @@ $(document).ready(function(){
                 });
                 modal_project_images.append(new_images);
 
-                let new_subtitle = "";
-                Object.entries(project.subtitle).forEach(function(subtitle){
-                    const [lang, output] = subtitle;
-                    new_subtitle += "<h3 class='";
-                    new_subtitle += "terminal-portfolio_modal-content-subtitle ";
-                    new_subtitle += "portfolio_modal_subtitle' ";
-                    new_subtitle += "lang='"+lang+"'";
-                    new_subtitle += ">";
-                    new_subtitle += output;
-                    new_subtitle += "</h3>";
-                });
-                modal_project_title.after(new_subtitle);
-
                 let new_technology = "";
                 Object.entries(project.technologies).forEach(function(technology){
                     const [index, output] = technology;
@@ -118,7 +100,7 @@ $(document).ready(function(){
                 modal_project_technologies.append(new_technology);
 
                 let modal_project_technologies_1 = $(".portfolio_modal_technologies");
-                let new_description = "<div class='terminal-portfolio_modal-content-longdesc' ";
+                let new_description = "<div class='terminal-portfolio_modal-content-longdesc'>";
                 Object.entries(project.description).forEach(function(description){
                     const [lang, paragraphs] = description;
                     Object.entries(paragraphs).forEach(function(paragraph){

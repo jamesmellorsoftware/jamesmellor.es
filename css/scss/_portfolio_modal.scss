@@ -57,24 +57,14 @@
         &-longdesc {
             grid-column: 1 / -1;
             grid-row: 5 / 6;
-        }
-
-        &-subtitle {
-            font-weight: 400;
-            grid-column: 1 / -1;
-            grid-row: 3 / 4;
+            text-align: left;
         }
 
         &-technologies {
             grid-column: 1 / -1;
             grid-row: 4 / 5;
-        }
-
-        &-title {
-            font-weight: 400;
-            grid-column: 1 / -1;
-            grid-row: 2 / 3;
-            letter-spacing: 2px;
+            margin-bottom: 10px;
+            margin-top: 10px;
             text-transform: uppercase;
         }
     }

@@ -23,11 +23,6 @@
             </div>
         </div>
         
-        <h2 class="terminal-portfolio_modal-content-title portfolio_modal_title">&nbsp;</h2>
-
-        <h3 class="terminal-portfolio_modal-content-subtitle
-        portfolio_modal_subtitle" lang="">&nbsp;</h3>
-
         <div class="terminal-portfolio_modal-content-technologies portfolio_modal_technologies">
             <span class="terminal-portfolio-content-row-text-technologies-technology">&nbsp;</span>
         </div>

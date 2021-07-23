@@ -155,29 +155,12 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             ],
             'description' => [
                 'en' => [
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon'
-                ],
-                'es' => [
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon'
-                ],
-            ]
-        ],
-    "tipcalc" =>
-        [
-            'title' => 'tipcalc',
-            'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
-            'technologies' => ['JavaScript', 'HTML', 'CSS'],
-            'images' => ['main.jpg', 'desktop2.jpg'],
-            'description' => [
-                'en' => [
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon'
+                    'Galleri is a semi-block semi-gallery application.',
+                    'It is basically a virtual gallery - there are administrators, photographers,
+                    and visitors.',
+                    'Galleri has a back-end content management system that allows administrators
+                    and photographers to moderate posts, comments, and users, and create new ones.',
+                    'Once an image is uploaded, users can view it, like it, and comment on it.',
                 ],
                 'es' => [
                     'information coming soon',
@@ -198,15 +181,47 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             ],
             'description' => [
                 'en' => [
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon'
+                    'A simple Javascript quiz game, much like a pub quiz in any UK pub.',
+                    'The objective of the game is to guess as many of the questions correctly.',
+                    'The game allows you to select your difficulty, which consists of different time
+                    limits, different numbers of questions, and whether or not you are allowed to
+                    use lifelines.',
+                    'Lifelines include "fifty-fifty" (taking away 2 incorrect answers), a timer reset,
+                    and an option to skip the current question.',
+                    'I made this application to further practice with JavaScript and CSS grid / flexbox
+                    design.',
+                    'It is a continuation from Tipcalc.'
                 ],
                 'es' => [
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming soon',
-                    'information coming sooninformation coming soon'
+                    'Un juego sencillo de JavaScript, tal cual como los juegos en los pubs del Reino Unido.',
+                    'El objetivo del juego es adivinar y responder a la pregunta con la respuesta correcta.',
+                    'El juego le deja al jugador seleccionar el nivel de dificultad (diferentes límites de tiempo,
+                    número de preguntas, y si el jugador puede usar los lifelines o no).',
+                    'Los lifelines incluyen: 50-50 (borrar 2 respuestas incorrectas), reiniciar el temporizador,
+                    y una opción de saltar una pregunta.',
+                    'Construje esta aplicación para practicar más con JavaScript y diseños de CSS grid / flexbox.',
+                    'Es muy parecido al Tipcalc.'
+                ],
+            ]
+        ],
+    "tipcalc" =>
+        [
+            'title' => 'tipcalc',
+            'subtitle' => ['en' => 'Bill Tip Calculator', 'es' => 'Calculadora de Propinas'],
+            'technologies' => ['JavaScript', 'HTML', 'CSS'],
+            'images' => ['main.jpg', 'desktop2.jpg'],
+            'description' => [
+                'en' => [
+                    'A simple JavaScript site that calculates the tip you owe after any kind of bill.',
+                    'Allows for you to customise the tip percentage and the number of people to split with.',
+                    'I designed this primarily to practice some ES6 JavaScript I had learned and also
+                    to practice using CSS grid layouts and flexbox.'
+                ],
+                'es' => [
+                    'Una aplicación sencilla de JavaScript que calcula la propina que debes.',
+                    'Le deja al jugador seleccionar el porcentaje de la propina y el número de personas en la mesa.',
+                    'Desarrollé esta aplicación para practicar el JavaScript ES6 que había aprendido, y
+                    también para practicar CSS grid y flexbox.'
                 ],
             ]
         ]
