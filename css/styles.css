@@ -644,6 +644,7 @@ p {
 .terminal-portfolio-content-row {
   cursor: pointer;
   display: grid;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 1fr;
   transition: all 0.3s;
 }
@@ -658,18 +659,6 @@ p {
 .terminal-portfolio-content-row:active, .terminal-portfolio-content-row:focus {
   background-color: #3cffe1;
   transform: scale(0.9) translateY(3px);
-}
-
-@media screen and (max-width: 690px) {
-  .terminal-portfolio-content-row {
-    grid-template-columns: 40% 60%;
-  }
-}
-
-@media screen and (min-width: 690px) {
-  .terminal-portfolio-content-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .terminal-portfolio-content-row-image {

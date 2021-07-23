@@ -17,6 +17,7 @@
         &-row {
             cursor: pointer;
             display: grid;
+            grid-template-columns: 40% 60%;
             grid-template-rows: 1fr;
             transition: all 0.3s;
 
@@ -31,8 +32,6 @@
                 background-color: darken($primary-5, 10%);
                 transform: scale(0.9)  translateY(3px);
             }
-            @media screen and (max-width: $mobile_width) { grid-template-columns: 40% 60%; }
-            @media screen and (min-width: $mobile_width) { grid-template-columns: repeat(2, 1fr); }
 
             &-image {
                 grid-column: 1 / 2;
