@@ -158,6 +158,18 @@ defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
             'github' => GITHUB.'galleri',
             'live' => ''
         ],
+    "el blog" =>
+        [
+            'title' => 'el blog',
+            'subtitle' => ['en' => 'Blog system with CMS', 'es' => 'Sístema de Blog con CMS'],
+            'technologies' => ['php', 'javascript', 'jquery', 'mysql', 'html5', 'css3'],
+            'images' => [
+                'main.jpg', 'desk2.jpg', 'desk3.jpg', 'desk4.jpg', 'desk5.jpg',
+                'desk6.jpg', 'mob1.jpg', 'mob2.jpg'
+            ],
+            'github' => GITHUB.'elblog',
+            'live' => ''
+        ],
     "pub quiz" =>
         [
             'title' => 'pub quiz',
