@@ -254,7 +254,7 @@ $(document).ready(function(){
     function playWindowAnimations(section_to_open) {
         let fade_elements = section_to_open.find('.fade_element');
         fade_elements.css('display', 'none');
-        fade_elements.each(function(){ $(this).fadeIn(1000); });
+        fade_elements.each(function(){ $(this).fadeIn(800); });
     }
 
     

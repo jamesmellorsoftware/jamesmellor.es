@@ -733,6 +733,7 @@ p {
   display: flex;
   font-size: 1.3rem;
   justify-content: center;
+  margin-bottom: 20px;
   transition: all 0.3s;
 }
 
