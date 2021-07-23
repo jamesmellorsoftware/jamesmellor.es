@@ -271,18 +271,14 @@ defined("SECTION_TERMINAL_OPERATIONS_INSTRUCTIONS") ? null : define("SECTION_TER
 [
     'en' => [
         'Welcome to jamesmellor.es!',
-        'First time visiting? Check the About section',
-        'After reading about me, check My Projects',
-        "If you'd like to speak to me, ask me a question, contact me!",
-        'Alternatively, you can use this terminal to navigate my website.',
-        'For a list of terminal commands, type: commandlist'
+        'First time visiting? Check sections: About Me, My Work, Contact.',
+        'Alternatively, you can use this terminal to navigate.',
+        'For help with commands, type: commandlist'
     ],
     'es' => [
         '¡Bienvenid@s a jamesmellor.es!',
-        'Es tu primera vez aquí? Abre la sección Sobre Mi.',
-        'Después de leer esa información, comprueba Mis Proyectos.',
-        "Si quieres hablar conmigo o tienes dudas y preguntas, puedes contactarme.",
-        'Alternativamente, puedes usar este terminal para navegar mi sitio web.',
+        '¿Es tu primera vez aquí? Abre las secciones: Sobre Mi, Mis Proyectos, Contacto.',
+        'Alternativamente, puedes usar este terminal para navegar.',
         'Para acceder a la lista de comandas, inscribe: commandlist'
     ]
 ]);
