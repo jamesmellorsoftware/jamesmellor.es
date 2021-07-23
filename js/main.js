@@ -60,13 +60,13 @@ $(document).ready(function(){
                 let modal = $("#portfolio_modal");
                 let modal_topbar_title = modal.find(".terminal-topbar-text");
                 let modal_project_technologies = modal.find(".portfolio_modal_technologies");
-                let modal_project_description = modal.find(".portfolio_modal_description");
+                let modal_project_links = modal.find(".portfolio_modal_links");
                 let modal_project_images = modal.find(".portfolio_modal_imagecontainer");
 
                 // Clear modal data to avoid other projects interfering with new info
                 modal_topbar_title.html("");
                 modal_project_technologies.empty();
-                modal_project_description.remove();
+                modal_project_links.empty();
                 modal_project_images.find(".portfolio_modal_image").remove();
 
                 // ===== Change modal data
@@ -91,31 +91,36 @@ $(document).ready(function(){
                 Object.entries(project.technologies).forEach(function(technology){
                     const [index, output] = technology;
                     new_technology += "<span class='";
-                    new_technology += "terminal-portfolio-content-row-text-technologies-technology'";
+                    new_technology += "terminal-portfolio_modal-content-technologies-technology'";
                     new_technology += ">";
-                    new_technology += output;
+                    new_technology += '<i class="devicon-'+output+'-plain colored"></i>';
                     new_technology += "</span> ";
                     
                 });
                 modal_project_technologies.append(new_technology);
-
-                let modal_project_technologies_1 = $(".portfolio_modal_technologies");
-                let new_description = "<div class='terminal-portfolio_modal-content-longdesc'>";
-                Object.entries(project.description).forEach(function(description){
-                    const [lang, paragraphs] = description;
-                    Object.entries(paragraphs).forEach(function(paragraph){
-                        const [index, output] = paragraph;
-                        new_description += "<p class='";
-                        new_description += "terminal-portfolio_modal-content-longdesc-desc ";
-                        new_description += "portfolio_modal_description' ";
-                        new_description += "lang='"+lang+"'";
-                        new_description += ">";
-                        new_description += output;
-                        new_description += "</p>";
-                    });
-                });
-                new_description += "</div>";
-                modal_project_technologies_1.after(new_description);
+                
+                if (project.github.length > 0) {
+                    let new_github_link = "";
+                    new_github_link += "<a target='_blank' class='";
+                    new_github_link += "terminal-portfolio_modal-content-links-link' ";
+                    new_github_link += "terminal-portfolio_modal-content-links-link-github' ";
+                    new_github_link += "href='"+project.github+"'>";
+                    new_github_link += "<span lang='en'>View on Github &#x29c9;</span>";
+                    new_github_link += "<span lang='es'>Ver en Github &#x29c9;</span>";
+                    new_github_link += "</a>";
+                    modal_project_links.append(new_github_link);
+                }
+                if (project.live.length > 0) {
+                    let new_live_link = "";
+                    new_live_link += "<a target='_blank' class='";
+                    new_live_link += "terminal-portfolio_modal-content-links-link' ";
+                    new_live_link += "terminal-portfolio_modal-content-links-link-live'>";
+                    new_live_link += "href='"+project.live+"'>";
+                    new_live_link += "<span lang='en'>View Demo &#x29c9;</span>";
+                    new_live_link += "<span lang='es'>Ver Demo &#x29c9;</span>";
+                    new_live_link += "</a>";
+                    modal_project_links.append(new_live_link);
+                }
 
                 // ===== Hide non-selected language items
                 hideLanguageElements();

@@ -24,11 +24,11 @@
         </div>
         
         <div class="terminal-portfolio_modal-content-technologies portfolio_modal_technologies">
-            <span class="terminal-portfolio-content-row-text-technologies-technology">&nbsp;</span>
+            <span class="terminal-portfolio_modal-content-technologies-technology"></span>
         </div>
 
-        <p class="terminal-portfolio_modal-content-longdesc
-        portfolio_modal_description">&nbsp;</p>
+        <div class="terminal-portfolio_modal-content-links
+        portfolio_modal_links"></div>
 
     </div>
     

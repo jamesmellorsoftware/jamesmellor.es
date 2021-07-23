@@ -9,6 +9,31 @@
         height: 100%;
         text-align: center;
 
+        &-links {
+            display: flex;
+            font-size: 1.3rem;
+            justify-content: center;
+            transition: all 0.3s;
+
+            &-link {
+                background-color: $grey;
+                color: $white;
+                padding: 10px;
+                transition: all 0.3s;
+                &:hover {
+                    @media screen and (min-width: $small_mobile_width) {
+                        background-color: $primary-1;
+                        color: $primary-5;
+                    }
+                }
+                &:active,
+                &:focus {
+                    background-color: darken($primary-1, 10%);
+                    transform: scale(0.9)  translateY(3px);
+                }
+            }
+        }
+
         &-imagecontainer {
             grid-column: 1 / -1;
             grid-row: 1 / 2;
@@ -48,23 +73,12 @@
                 max-width: 100%;
                 object-fit: scale-down;
                 width: 100%;
-
-                &--active {
-                    display: inline;
-                }
-
+                &--active { display: inline; }
             }
         }
 
-        &-longdesc {
-            grid-column: 1 / -1;
-            grid-row: 5 / 6;
-            text-align: left;
-        }
-
         &-technologies {
-            grid-column: 1 / -1;
-            grid-row: 4 / 5;
+            font-size: 4rem;
             margin-bottom: 10px;
             margin-top: 10px;
             text-transform: uppercase;

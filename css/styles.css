@@ -167,9 +167,14 @@ p {
 .navbar-icons-label {
   color: white;
   margin-top: 5px;
-  opacity: 0%;
-  transform: translateY(-5px);
-  transition: all 0.3s;
+}
+
+@media screen and (min-width: 550px) {
+  .navbar-icons-label {
+    opacity: 0%;
+    transform: translateY(-5px);
+    transition: all 0.3s;
+  }
 }
 
 .navbar-icons-selected {
@@ -724,6 +729,32 @@ p {
   text-align: center;
 }
 
+.terminal-portfolio_modal-content-links {
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.terminal-portfolio_modal-content-links-link {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 550px) {
+  .terminal-portfolio_modal-content-links-link:hover {
+    background-color: #0B132B;
+    color: #6FFFE9;
+  }
+}
+
+.terminal-portfolio_modal-content-links-link:active, .terminal-portfolio_modal-content-links-link:focus {
+  background-color: #010102;
+  transform: scale(0.9) translateY(3px);
+}
+
 .terminal-portfolio_modal-content-imagecontainer {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -771,15 +802,8 @@ p {
   display: inline;
 }
 
-.terminal-portfolio_modal-content-longdesc {
-  grid-column: 1 / -1;
-  grid-row: 5 / 6;
-  text-align: left;
-}
-
 .terminal-portfolio_modal-content-technologies {
-  grid-column: 1 / -1;
-  grid-row: 4 / 5;
+  font-size: 4rem;
   margin-bottom: 10px;
   margin-top: 10px;
   text-transform: uppercase;
