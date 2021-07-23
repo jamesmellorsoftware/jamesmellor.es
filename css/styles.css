@@ -261,7 +261,6 @@ p {
   color: #6c757d;
   display: flex;
   font-family: "Courier New", "Courier", "monospace";
-  font-size: 1.2rem;
   font-weight: 800;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -281,6 +280,12 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-topbar-controls {
+    font-size: 1.3rem;
+  }
 }
 
 .terminal-topbar-controls-control {
@@ -304,6 +309,12 @@ p {
 .terminal-topbar-text {
   font-size: 0.8rem;
   padding-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .terminal-topbar-text {
+    font-size: 1.0rem;
+  }
 }
 
 .terminal-content {
