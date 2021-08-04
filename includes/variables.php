@@ -146,6 +146,17 @@ defined("SECTION_PORTFOLIO_TITLE") ? null : define("SECTION_PORTFOLIO_TITLE",
 ]);
 defined("SECTION_PORTFOLIO_ROWS") ? null : define("SECTION_PORTFOLIO_ROWS",
 [
+    "timetracker" =>
+        [
+            'title' => 'timetracker',
+            'subtitle' => ['en' => 'Time Management', 'es' => 'Temporizador'],
+            'technologies' => ['php', 'javascript', 'jquery', 'mysql', 'html5', 'css3'],
+            'images' => [
+                'main.jpg', 'timetrackdesk1.jpg', 'timetrackmob1.jpg', 'timetrackmob2.jpg'
+            ],
+            'github' => GITHUB.'timetracker',
+            'live' => ''
+        ],
     "galleri" =>
         [
             'title' => 'galleri',
